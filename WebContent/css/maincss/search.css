@@ -1,0 +1,49 @@
+/* ===============
+     09_통합검색
+ ================= */
+.searchAll {}
+.searchAll .noData {margin-top:100px; line-height:30px}
+.searchAll .listTotal {margin-top:38px;}
+.searchAll .listTotal .totalCnt {font-size:16px; color:#222; margin-bottom:9px}
+.searchAll #photoReviewList .reviewList ul li .rvResume .writing {overflow:hidden; height:44px;}
+.searchAll .paging {margin-top:30px;}
+.searchAll .btn_mare {margin-top:30px}
+.searchAll .btn_mare .btn {min-width:160px}
+.unifiedSch {padding:84px 0 78px; text-align:center;}
+.unifiedSch .unified_search {position:relative; margin:0 auto; padding-bottom:14px; width:860px; border-bottom:3px solid #222222; }
+.unifiedSch .unified_search input[type=text] {padding:0 65px 0px 0; width:100%; border:none; background:none; font-size:24px; line-height:44px; height:44px; text-indent:0; color:#222; 
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing:border-box;
+     -o-box-sizing:border-box;
+     -ms-box-sizing:border-box;
+     box-sizing:border-box;
+     -webkit-transition:all .2s ease-in-out;
+     transition:all .2s ease-in-out;
+}
+.unifiedSch .unified_search input::-webkit-input-placeholder{color:#999}
+.unifiedSch .unified_search input[type=text]:focus {outline:none; color:#222; font-size:32px; line-height:44px; height:44px; font-family:'NotoB'; }
+.unifiedSch .unified_search .btn_sch {display:block; position:absolute; right:0; top:0; width:50px; height:50px; background:url('../img/search01.png') no-repeat;}
+.schKeyword {margin:0 auto; width:420px; min-height:200px;}
+.schKeyword .schKeyword_tit {width:180px; margin:0 auto; margin-bottom:36px; padding-bottom:37px; letter-spacing:-0.5px;background:url('../img/plus01.png') no-repeat center bottom; font-size:15px; font-family:'HB'; text-align:left; }
+.schKeyword .schKeyword_tit span{display:inline-block; width:100%; height:20px;word-break:break-all;overflow:hidden; 
+     -webkit-animation:schKeywordTyping 2s steps(60, end);
+     -moz-animation:schKeywordTyping 2s steps(60, end);
+     -o-animation:schKeywordTyping 2s steps(60, end);
+     -ms-animation:schKeywordTyping 2s steps(60, end);
+     animation:schKeywordTyping 2s steps(60, end);
+     animation-timing-function: ease-in;
+}
+@keyframes schKeywordTyping{ 
+  from { width: 0; } 
+} 
+.schKeyword .schRolling .rolling {min-height:200px; overflow:hidden; }
+.schKeyword .schRolling .slick-list{position:relative;}
+.schKeyword .schRolling .slick-list:after {content:''; position:absolute; top:0; left:0; width:100%; height:60px; background:url('../images/common/bg_schRollingT.png') repeat-x 0 top; }
+.schKeyword .schRolling .slick-list:before {content:''; position:absolute; bottom:0; left:0; width:100%; height:60px; background:url('../images/common/bg_schRollingB.png') repeat-x 0 bottom; z-index:2}
+.schKeyword .schRolling .rolling .slick-slide {padding:10px 0; text-align:center;}
+.schKeyword .schRolling .rolling .slick-slide a {font-size:32px; font-family:'NotoB'; color:#ccc; line-height:46px;
+     -webkit-transition-duration:.3s;
+     transition-duration:.3s;
+}
+.schKeyword .schRolling .rolling .slick-slide a:hover,
+.schKeyword .schRolling .rolling .slick-slide.slick-active.slick-center a {color:#222}

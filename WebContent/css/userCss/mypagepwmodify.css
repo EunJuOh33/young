@@ -1,0 +1,275 @@
+* {	/* 기본 설정 */
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	letter-spacing: -1.1px;	/* 글자와 글자사이의 간격. 원래 폰트의 간격에서 -1.1px만큼 줄였다. */
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+img {
+	display: block;
+	position: absolute;
+}
+
+
+/* -------------------------- wrap -------------------------- */
+
+#wrap {
+	height: 100%;	/* 100%는 부모기준 */
+	width: 100%;
+}
+
+
+/* -------------------------- nav -------------------------- */
+nav {
+	position: fixed;
+	lift: 0;
+	top: 0;
+	width: 90px;
+	height:100%;
+}
+
+
+/* -------------------------- container -------------------------- */
+#container {
+	position: relative;
+	padding-left: 90px;
+	padding-bottom: 120px;
+}
+
+
+/* -------------------------- header -------------------------- */
+header {
+	position: relative;
+	height: 108px;
+	padding: 0 60px;
+}
+
+header .menu {
+	height: 40px;
+	min-width: 1000px;
+	/* width를 설정하면, 브라우저가 아무리 작아져도 그 너비를 유지한다. 
+		설정이 되어있지 않는 경우, min-width를 사용해서 지정한 크기 이하로 너비가 줄어들지 않도록 설정한다. */
+	padding: 47px 0 20px 0;
+	border-bottom: 1px solid #eeeeee;;
+}
+
+header .menu h2 {
+	position: relative;
+	display: inline-block;
+	float: left;
+	margin-right: 45px;
+	font-size: 30px;
+	letter-spacing: -0.7px;
+}
+
+header .menu h2 a {
+	color: #222222;
+}
+
+header .menu p {
+	display: inline-block;
+	height: 32px;
+	line-height: 40px;
+	padding-top: 8px;
+	font-size: 14.3px;
+	font-weight: 900;;
+}
+
+/* -------------------------- article -------------------------- */
+@media all and (max-width: 1300px) {	
+/* 브라우저 너비가 1300px보다 작아질 때 이 쿼리가 실행됨 */
+/* @media: 미디어 쿼리가 시작됨을 선언 
+ * all 키워드 : 생략 가능하고, 생략했을 때 기본 값은 all 으로 처리
+ * width / height : 뷰포트의 너비와 높이. 
+ *					뷰포트의 크기는 HTML body 콘텐츠를 표시하는 영역으로 실제 스크린의 크기와는 다르다. 
+ *					반응형 웹 구현시 가장 일반적으로 사용하는 조건이 된다.
+ */
+	#container article {
+		margin: 0 105px;
+	}
+}
+
+article {
+	width: 980px;
+	margin: 0 auto;
+}
+
+article h2 {
+	display: block;
+	height: 30px;
+	padding: 60px 0 25px 0;
+	
+	text-align: center;
+	line-height: 30px;
+	font-size: 30px;
+	font-weight: 600;
+	color: #222222;	/* 이제부터 검정은 이 색깔 사용 */
+	letter-spacing: -1px;
+}
+
+article .tabSmallMenu {
+	height: 24px;
+	margin-bottom: 35px;
+}
+
+article .tabSmallMenu ul {
+	text-align: center;
+	height: 24px;
+}
+
+article .tabSmallMenu ul li {
+	display: inline-block;
+	height: 24px;
+	padding: 0 12px;
+	line-height: 24px;
+}
+
+article .tabSmallMenu ul li a {
+	color: #999999;
+	font-weight: 600;
+	font-size: 16px;
+	letter-spacing: -0.7px;
+	
+	cursor: pointer;
+}
+	
+article .tabSmallMenu ul .on a {
+	height: 23px;
+	line-height: 23px;
+	border-bottom: 1px solid black;
+	
+	color: #222222;
+}
+
+
+/* -------------------------- article - contents - modifyPwForm -------------------------- */
+article .contents {
+	width: 980px;
+	border-top: 1px solid #222222;
+}
+
+article .contents .modifyPwForm .title {
+	float: left;
+	display: inline-block;
+	padding: 30px 0;
+	width: 147px;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	color: #555;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+article .contents .modifyPwForm .box {
+	display: inline-block;
+	width: 833px;
+	height: 40px;
+	line-height: 40px;
+	padding: 30px 0;
+}
+
+article .contents .modifyPwForm .box input {
+	width: 232px;	/* 250 맞추기 */
+	height: 38px;
+	padding: 0 8px;
+	border: 1px solid #dcdcdc;
+	/* input 안 글자 */
+	color: #555;	
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+
+article .contents .modifyPwForm .box .hideTx {
+	height: 30px;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+
+/* -------------------------- article - contents - sub -------------------------- */
+article .contents .sub {
+	display: block;
+	width: 900px;
+	height: 30px;
+	padding: 36px 40px;
+	background: #f9f9f9;
+}
+
+article .contents .sub div {
+	display: block;
+	height: 20px;
+}
+
+article .contents .sub div p {
+	margin-top: 10px;
+	font-size: 11.5px;
+	font-weight: 600;
+	letter-spacing: -0.5px;
+	color: #999999;
+}
+
+
+/* -------------------------- article - contents - btn -------------------------- */
+article .contents .btn {
+	position: relative;
+	width: 980px;
+	height: 40px;
+	margin-top: 30px;
+	text-align: center;	/* div 가운데 정렬 */
+}
+
+article .contents .btn div {
+	position: relative;
+	display: inline-block;
+}
+
+article .contents .btn div .confirmBtn,
+article .contents .btn div .cancelBtn {	/* 버튼 공통 디자인 */
+	display: inline-block;
+	width: 138px;	/* 140 맞추기 */
+	height: 38px;	/* 40 맞추기 */
+	
+	font-size: 14.3px;
+	text-align: center;
+	font-weight: 800;
+	line-height: 40px;
+	letter-spacing: 0;
+	
+	/* 애니메이션 */
+	cursor: pointer;
+	transition: all 0.3s;	/* 모두 3초만에 바뀐다. */
+}
+
+article .contents .btn div .confirmBtn {
+	margin-right: 3px;
+	background-color: #A6CD48;;	/* 초록색*/
+	color: white;	/* 텍스트 색깔 */
+	border: 1px solid #A6CD48;
+}
+
+article .contents .btn div .confirmBtn:hover {
+	color: #555555;
+	box-shadow: 140px 0 0 0 rgba(255, 255, 255, 1) inset;	
+}
+
+article .contents .btn div .cancelBtn {
+	background-color: white;	/* 흰색 */
+	color: #555555;	/* 텍스트 색깔 : 검정 */
+	border: 1px solid #999999;
+}
+
+article .contents .btn div .cancelBtn:hover {
+	color: white;
+	box-shadow: 140px 0 0 0 rgba(153, 153, 153, 1) inset;	/* 회색 그림자 */
+}

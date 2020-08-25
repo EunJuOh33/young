@@ -1,0 +1,146 @@
+/* -------------------------- 모달창 -------------------------- */
+
+.modal {
+	display: none;	
+	position: fixed;	/* z-index는 relative나 absolute일 때 동작 */
+	top: 38%;
+	width: 100%;
+	z-index: 1;	/* 원래 화면보다 앞에 나오도록 */
+}
+
+.modal .modal_layer {	/* 검은 배경 */
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;	/* 부모 태그의 100% */
+	  height: 100%;
+	  background: rgba(0, 0, 0, 0.5);	/* 검은색 투명도 50 */
+	  z-index: -1;	/* modal_content보다 뒤로 가도록 */
+}  
+
+.modal .modal_content {
+	position: relative;
+	margin: 0 auto;
+	padding: 20px 40px;
+	width: 320px;
+	height: 195px;
+	background: white;
+}
+
+/* myPageManage의 모달 수정 */
+.modal .manageMd {
+	height: 171px;
+}
+
+.modal .userDelMd_content {
+	height: 171px;
+}
+
+.modal h2 {
+	height: 48px;
+	margin-top: 47px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 15.5px;
+	font-weight: 600;
+	color: #28283C;  
+}
+
+.modal .userDelMd_content h2 {
+	margin-top: 40px;
+}
+
+/* myPageManage 모달 수정 */
+.modal .manageMd h2 {
+	height: 24px;
+}
+
+.modal .modal_content .containerBtn {	/* 버튼 두 개 들어가는 공간 */
+	position: relative;
+	margin-top: 30px;
+	width: 320px;
+	height: 40px;
+}
+
+#RePwMd .manageMd .containerBtn {
+	text-align: center;
+}
+
+/* myPageManage 모달 수정 */
+.modal .modal_content .containerBtn {
+	text-align: center;
+}
+
+.modal .styleBtn {
+	position: relative;
+	display: inline-block;
+	font-size: 14.3px;
+	text-align: center;
+	font-weight: 800;
+	line-height: 40px;
+	background-color: #A6CD48;	/* 원래 초록색 */
+	color: white;	/* 텍스트 색깔 */
+	border: 1px solid #A6CD48;
+	
+	/* 애니메이션 */
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.modal .styleBtn2 {
+	position: relative;
+	display: inline-block;
+	font-size: 14.3px;
+	text-align: center;
+	font-weight: 800;
+	line-height: 40px;
+	background-color: white;	/* 원래 흰색 */
+	color: #555555;	/* 텍스트 색깔 */
+	border: 1px solid #999999;
+	
+	/* 애니메이션 */
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.modal .modal_content .containerBtn #offBtn2 {
+	width: 138px;
+	height: 38px;
+	margin: 0 auto;
+}
+
+.modal .manageMd .containerBtn .shapeBtn {
+	width: 138px;
+	height: 38px;
+}
+
+.modal .userDelMd_content .containerBtn #userDelMd_confirmBtn {
+	float: left;
+	width: 138px;
+	height: 38px;
+	margin-left: 17.5px;
+	margin-right: 5px;
+}
+
+.modal .userDelMd_content .containerBtn #userDelMd_offBtn {
+	width: 138px;
+	height: 38px;
+	margin-right: 17.5px;
+	margin-left: 0;
+}
+
+
+.modal #confirmBtn, .modal #offBtn2 {
+	margin-left: 17px; 
+}
+
+.modal #confirmBtn:hover, .modal #offBtn2:hover,
+.modal #userDelMd_confirmBtn:hover {
+	color: black;
+	box-shadow: 140px 0 0 0 rgba(255, 255, 255, 1) inset;	
+}
+
+.modal #userDelMd_offBtn:hover, .modal #offBtn:hover {
+	color: white;
+	box-shadow: 140px 0 0 0 #999999 inset;
+}

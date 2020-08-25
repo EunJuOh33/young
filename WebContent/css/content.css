@@ -1,0 +1,650 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap');
+
+h1, h2, h3, h4, h5{
+	font-family: 'Noto Sans KR', sans-serif;
+} 
+
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	
+}
+
+
+.leftMenu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 89px;
+    text-align: center;
+    background: #fff;
+    border-right: 1px solid #dcdcdc;
+    z-index: 999;
+}
+
+#container{
+	position: relative;
+	padding-left: 90px;	
+	box-sizing: border-box;
+}
+
+#container::after{
+	content: "";
+    display: block;
+    clear: both;
+}
+
+.wideContent{
+	position: relative;
+    padding: 30px 60px;
+    box-sizing: border-box;
+}
+
+.upMenu {
+	position: relative;
+	z-index: 850px;
+	height: 100px;
+	border-bottom: 1px solid #eeeeee;
+/*	background: gray; */
+	
+	
+	
+}
+
+.topTitle{
+	
+	padding-top:30px;
+	float: left;
+    display: inline-block; /*줄 바꿈x 크기설정o*/
+    margin-right: 45px;
+	font-size: 32px;
+    letter-spacing: -0.5px; /*폰트 간격*/
+    color: #222222;
+}
+
+.upMenu#up>ul{
+	position:relative;
+	float: left;
+	width: 300px;
+	height: 30px;
+	line-height: 120px;
+	
+}
+
+.upMenu>ul>li{
+	position:relative;
+	float: left;
+    margin-right: 25px;
+
+}
+
+.upMenu>ul>li#on>a{
+	color: #5D5D5D;
+	font-weight: 700;
+
+}
+
+.upMenu>ul>li>a{
+	color: #BDBDBD;
+
+}
+
+.upMenu>ul>li>a:hover{
+	color: #5D5D5D;
+
+}
+
+
+.contents {
+	clear: both;
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.conTitle{
+	animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  	animation-duration: 0.7s;
+	padding: 60px 0 25px;
+    text-align: center;
+	font-size: 30px;
+	line-height:30px;
+	color: #222222;
+    letter-spacing: -0.4px;
+}
+
+
+.conSub{
+	animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  	animation-duration: 1s;
+}
+
+.conSub>ul{
+	text-align: center;
+}
+
+.conSub>ul>li>a{
+	color: #8C8C8C;		
+}
+
+.conSub>ul>li{
+	display: inline-block;
+	padding: 0 12px;
+}
+
+
+.conSub>ul>li.on1>a{	
+	text-decoration:underline;
+	color: black;	
+}
+
+.conSub>ul>li>a:hover{
+	text-decoration:underline;
+	color: black;	
+}
+
+.conSub>ul::after{
+	content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+/*이벤트 배너 사진 */
+
+.eventBox{
+	margin: 30px auto 10px;
+	
+}
+
+.eventBox li{
+	float: left;
+	width:50%;
+	margin-bottom:20px;
+	box-sizing: border-box;
+	display: block;
+	
+}
+
+
+.eventBox li:nth-child(odd) {
+    padding-right: 10px;
+}
+
+.eventBox li:nth-child(even) {
+    padding-left: 10px;
+}
+
+.eventBox li .brandwrap{
+	display: block;
+	position: relative;
+	overflow: hidden;
+	
+}
+
+
+.eventBox li .eventThumb{
+	position: relative;
+	max-width: 480px;	
+}
+
+.eventBox li .eventThumb .evtThumb{
+	display: block;
+	overflow: hidden;
+	padding-bottom: 50%;
+	animation: fadeInUp; 
+  	animation-duration: 1s;
+}
+
+.eventBox li .eventThumb .evtThumb img{
+	display: block;
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	
+}
+
+.eventBox li .eventInfo{
+	opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding: 0 60px;
+    background-color: rgba(0,0,0,.4);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+
+
+.eventBox li .eventInfo{
+	font-size: 12px;
+	transition-duration: 0.5s;
+	opacity: 0;
+	
+}
+
+
+.eventBox li .eventInfo>p.evt_cate{
+	font-size: 14px;
+	padding-top: 60px;
+}
+
+.eventBox li .eventInfo>p.evt_cate>span{
+	display: inline-block;
+    line-height: 35px;
+    border-bottom: 1px solid #fff;
+}
+
+
+.eventBox li .eventInfo>p.evt_tit{
+	font-size: 16px;
+	margin-top: 25px;
+	white-space: nowrap; /* 공백을 아무리 넣어도 한 줄만 표시 */
+	text-overflow: ellipsis; /* 말 줄임 표시 */
+	overflow: hidden; /* 말 줄임 하면서 글이 넘어가면 숨기기 */
+}
+
+
+
+
+.eventBox>li>a:hover .eventInfo{
+	opacity:1;
+	display: inline-block;
+}
+
+.eventBox>li:hover .evt_tit{
+	animation: fadeInUp; 
+	opacity:1;
+  	animation-duration: 0.4s;
+	
+}
+
+.eventBox>li:hover .evt_date{
+	animation: fadeInUp; 
+	opacity:1;
+  	animation-duration: 0.6s;
+}
+
+
+.eventBox::after{
+	content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+
+
+
+/* 페이징  */
+
+.paging{
+	text-align: center;
+    font-size: 0;
+    line-height: 0;
+}
+
+
+.paging>span>a>img{
+	width: 10px;
+	height: 13px;
+}
+
+ .paging span.first {
+    margin-right: 9px;
+}
+
+.paging span.prev {
+    margin-right: 9px;
+}
+.paging span.next {
+    margin-right: 9px;
+}
+.paging span.last {
+    margin-right: 9px;
+}
+
+.paging .current {
+    position: relative;
+    padding-right: 35px;
+    margin-right: 8px;
+    color: #222;
+
+    
+}
+
+.paging a , .paging span{
+	display: inline-block;
+	height: 14px;
+	padding:0 7px;
+	font-size: 14px;
+	line-height: 14px;
+	vertical-align: middle;
+}
+
+
+
+.paging span.first, .paging span.prev, .paging span.next, .paging span.last {
+    padding: 0;
+}
+
+.paging .current::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -1px;
+    width: 20px;
+    height: 2px;
+    background: #dddddd;
+}
+
+
+
+
+
+/* 이벤트 당첨 글 리스트 */
+
+
+
+.subTitle {
+    position: relative;
+    margin-top: 35px;
+    padding: 20px 0 30px;
+    border-bottom: 1px solid #000;
+}
+
+.subTitle .btn_View {
+    position: absolute;
+    top: 28px;
+    right: 0px;
+}
+
+.btn_View {
+    display: inline-block;
+    position: relative;
+    padding-right: 16px;
+    margin-right: 5px;
+    font-size: 13px;
+    line-height: 15px;
+    border:0;
+    outline:0;
+    color: #999999;
+    background:white;
+   	text-align: center;
+	vertical-align: middle; /*부모요소의 중앙에 위치*/
+  	box-sizing: border-box;
+}
+
+.btn_View:hover{
+	font-weight:400;
+	color: black;
+	cursor: pointer;
+}
+
+
+.eventView{
+	display: block;
+}
+
+
+.eventView_box > li:first-child {
+    border-top: none;
+}
+
+.eventView_box > li {
+    border-top: 1px solid #eeeeee;
+    padding: 30px 0;
+    height: 180px;
+
+}
+
+
+.eventView_box li > a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.eventView_box{
+	border-bottom: 1px solid black;
+	
+}
+
+
+
+.eventView_box .opt_tit {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #222;
+    line-height: 24px;
+   	text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.eventView_box .opt_info {
+    margin-top: 5px;
+    font-size:0;
+ 	color: #999;
+}
+
+.eventView_box .opt_info span {
+    position: relative;
+    padding-right: 15px;
+    margin-right: 10px;
+    font-size: 13px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.eventView_box .opt_user::after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    width: 1px;
+    height: 10px;
+    background-color: #dcdcdc;
+}
+
+.eventView_box .opt_txt {
+	margin-top: 10px;
+  	overflow: hidden;
+    color: #999;
+    line-height: 24px;
+    font-size: 14px;
+  
+}
+
+.reviewInfo{
+	float: left;
+	width:630px;
+
+}
+
+.reviewThumb{
+	float: right;
+    position: relative;
+}
+
+.addCon{
+	float: right;
+	width:300px;
+	height: auto;
+	position: relative;
+	display: block;
+}
+
+
+
+.opt_thumb{
+	display: block;
+    position: relative;
+    padding-bottom: 56.25%;
+    width: 320px;
+    height: 0;
+    overflow: hidden;
+}
+
+.opt_thumb img{
+	width: 100%;
+    height: auto;
+}
+
+.btn_View{
+	z-index: 100;
+}
+
+/* 
+
+.reviewPhoto .opt_num{
+	position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 8px 10px 3px;
+    background: rgba(0,0,0,.3) url(../img/layers.svg) no-repeat center;
+    width: 13px;
+    line-height: 12px;
+    font-size: 10px;
+    color: black;
+    text-align: center;
+} */
+
+
+
+
+
+
+
+/* 푸터 */
+
+
+#footer{
+	position: relative;
+	padding-left:90px;	
+	box-sizing: border-box;
+	padding-top: 60px;
+}
+
+#footer>div{
+	padding: 0 60px;
+}
+
+.footerT{
+	padding: 0 60px;
+	position:relative;
+	border-top: 1px solid #eeeeee;
+}
+
+#footer .foot_menu {
+    padding: 20px 0;
+}
+
+#footer .foot_menu ul {
+    margin-left: -10px;
+}
+
+.foot_menu li{
+	float: left;
+	margin-right: 20px;
+}
+
+#footer .sitemap {
+    position: absolute;
+    right: 325px;
+	width: 160px;
+    height: 100%;
+}
+
+#footer .familysite {
+    position: absolute;
+    right: 168px;
+ 	width: 150px;
+    height: 100%;
+}
+
+#footer .korean {
+    position: absolute;
+    right: 50px;
+ 	swidth: 110px;
+    height: 100%;
+}
+
+.foot_menu::after{
+	content: "";
+    display: block;
+    clear: both;
+}
+
+.footerM{
+	position: relative;
+    background: #f9f9f9;
+}
+
+.footInfo{
+	padding: 25px 0;
+    font-size: 12px;
+    line-height: 24px;
+    color: #999999;
+}
+
+.foot_sns {
+    position: absolute;
+    right: 55px;
+    top: 45px;
+}
+
+.foot_sns>a>img{
+	margin-right:20px;
+}
+
+.footerB{
+	background: #f9f9f9;
+    border-top: 1px solid #eeeeee;
+}
+
+.footMaker {
+	font-size: 12px;
+	color: #999999;
+    padding: 30px 0 70px;
+ 
+}
+
+
+.footMaker span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footMaker>ul>li {
+	float: left;
+    position: relative;
+    margin-right: 40px;
+    font-size: 11px;
+    line-height: 14px;
+    color: #999999;
+}
+
+

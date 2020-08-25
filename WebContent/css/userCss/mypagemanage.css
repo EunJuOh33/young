@@ -1,0 +1,476 @@
+/* -------------------------- wide_menu -------------------------- */
+.wide_menu {
+	position: relative;
+	height: 108px;
+	padding: 0 60px;
+	padding-top: 30px;
+}
+
+.wide_menu .menu {	
+	height: 40px;
+	min-width: 1000px;
+	/* width를 설정하면, 브라우저가 아무리 작아져도 그 너비를 유지한다. 
+		설정이 되어있지 않는 경우, min-width를 사용해서 지정한 크기 이하로 너비가 줄어들지 않도록 설정한다. */
+	padding: 20px 0 15px 0;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.wide_menu .menu h2 {
+	position: relative;
+	display: inline-block;
+	float: left;
+	margin-right: 45px;
+	font-size: 31px;
+	letter-spacing: -0.7px;
+}
+
+.wide_menu .menu h2 a {
+	color: #222222;
+	font-weight: 600;
+}
+
+.wide_menu .menu p {
+	display: inline-block;
+	margin-right: 17px;
+	height: 32px;
+	line-height: 40px;
+	padding-top: 8px;
+	font-size: 15px;
+	font-weight: 900;
+	text-shadow: 0.5px 0.5px #9999;
+}
+
+.wide_menu .menu p a {
+	color: #9999;
+	font-weight: 600;
+}
+
+.wide_menu .menu p #on {
+	color: #222222
+}
+
+
+/* ---------------------- userInfoArea ----------------------*/
+article .userInfoArea {
+	margin-top: 35px;
+}
+
+article .userInfoArea h3 {
+	padding-bottom: 15px;
+	line-height: 26px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222222;
+    border-bottom: 1px solid #222222;
+}
+
+
+/* ---------------------- 테이블 공통설정 ----------------------*/
+article .userInfoArea table {
+	width: 100%;
+    border-collapse: collapse;
+    /* collapse : 표(table)의 테두리와 셀(td)의 테두리 사이의 간격을 없앤다. 겹치는 부분은 한 줄로 나타낸다.*/
+    border-spacing: 0;
+    table-layout: fixed;
+    /* 데이터가 길어져서 지정한 너비 이상으로 늘어나는 것을 방지. 
+	 * 한글 텍스트는 지정한 너비에서 줄바꿈이 일어난다. */
+}
+
+article .userInfoArea table caption {	/* 테이블 캡션 안보이게 */
+	visibility: hidden;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+
+article .userInfoArea table tbody tr th {
+	padding: 10px 0;
+    line-height: 40px;
+    text-align: left;
+    vertical-align: top;
+    color: #555;
+    font-size: 14.3px;
+    font-weight: 600;
+}
+
+article .userInfoArea table tbody tr td {
+	height: 30px;
+	padding: 10px 0;
+	color: #222;
+	font-size: 14.5px;
+	font-weight: 600;
+}
+
+article .userInfoArea table tbody tr .addrArea .td_addr {
+	margin: 10px 0;
+}
+
+article .userInfoArea table tbody tr td span {
+	letter-spacing: -0.3px;	/* 원래 -1.1px */
+}
+
+
+/* ---------------------- userInfoArea - userInfo_default ----------------------*/
+article .userInfoArea .userInfo_default {
+	float: left;
+    width: 660px;
+}
+
+article .userInfoArea .userInfo_default .defaultBox {
+	padding-top: 15px;
+}
+
+
+/* ------------------------ input 박스 ---------------------------- */
+.inp_txt {	/* 모든 input 공동 설정 */
+	width: 100%;
+    height: 40px;
+    padding: 0 8px;
+    line-height: 40px;
+    color: #555;
+    text-indent: 4px;
+    border: 1px solid #dcdcdc;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;	/* 선까지 합쳐서 높이와 너비를 계산한다. */
+    
+    color: #555;	/* input 안 글자 색 */
+	font-size: 14.5px;
+	letter-spacing: 0.3px;
+	font-weight: 600;
+}
+
+.inp_txt:focus {
+	border: 1px solid #222;
+}
+
+.box {
+	display: inline-block;
+    overflow: hidden;
+    float: left;
+    box-sizing: border-box;
+}
+
+.name_box {
+    width: 40%;
+}
+
+.phone_box, .email_box {
+    width: 30%;
+}
+
+.td_phone span {
+	display: inline-block;
+	float: left;
+	width: 5%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.td_email span {
+	display: inline-block;
+	float: left;
+	width: 5%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 13px;
+}
+
+.td_email span.small {
+	width: 8px;
+}
+
+.zip_box {
+	width: 30%;
+}
+
+.zip_box2 {
+	width: 30%;
+	margin-left: 8px;
+}
+
+.addr_box {
+	display: block;
+	clear: both;
+	width: 100%;
+	margin: 5px 0;
+}
+
+.zip_box2 .btn_zip {
+	position: relative;
+	float: left;
+	display: inline-block;
+	width: 120px;
+	height: 38px;
+	
+	font-size: 14.3px;
+	text-align: center;
+	font-weight: 800;
+	line-height: 36px;
+	
+	/* 애니메이션 */
+	cursor: pointer;
+	transition: all 0.3s;
+	background-color: #FFFFFF;	/* 원래 흰색 */
+	color: #555555;	/* 텍스트 색깔 */
+	border: 1px solid #999999;
+}
+
+.zip_box2 .btn_zip:hover {
+	color: white;
+	box-shadow: 120px 0 0 0 rgba(153, 153, 153, 1) inset;	/* 회색 그림자 */
+}
+
+/* 에러메세지 */
+p.error {
+	clear: both;
+	margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fa5855;
+    text-indent: 10px;
+    line-height: 30px;
+}
+
+
+/* ---------------------- userInfoArea - userInfo_add ----------------------*/
+article .userInfoArea .userInfo_add {
+	float: right;
+    width: 280px;
+}
+
+article .userInfoArea .userInfo_add .addBox {
+	border: 1px solid #dcdcdc;
+    border-top: 0;
+    padding: 26px 30px 50px;
+}
+
+article .userInfoArea .userInfo_add .addBox .add_tit {
+	color: #222;
+    font-size: 14.3px;
+    font-weight: 600;
+}
+
+article .userInfoArea .userInfo_add .addBox .add_titB {
+	color: #222;
+    font-size: 14.3px;
+    font-weight: 600;
+	margin-top: 36px;
+}
+
+article .userInfoArea .userInfo_add .addBox .genderRadio {
+	margin-top: 10px;
+}
+
+article .userInfoArea .userInfo_add .addBox .genderRadio div {
+    position: relative;
+	display: inline-block;
+    width: 44%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+article .userInfoArea .userInfo_add .addBox .genderRadio .noRadio {
+	margin-top: 8px;
+}
+
+article .userInfoArea .userInfo_add .addBox .genderRadio div label {
+	height: 16px;
+	line-height: 16px;
+	color: #555;
+	font-size: 14.3px;
+	font-weight: 600;
+}
+
+
+/* 라디오박스 공통 디자인 */
+input[type="radio"] { /* 실제 라디오 박스는 화면에서 숨김 */ 
+	/* overflow는 이 속성이 지정된 요소의 내용(content)이 요소의 크기보다 더 클 때
+		화면에 어떻게 보여줄지 설정. hidden은 넘어가는 것을 보여주지 않는다. */
+	width: 0;	
+	height: 0; 
+	border: 0;
+	overflow: hidden;  
+}
+
+input[type="radio"] + label:before { /* 가짜 라디오 박스 - 체크하기 전 */ 
+	content: ' '; 
+	display: inline-block;
+	margin: -3px 5px 0 -4px;	/* label 안에서의 위치 조절 */
+	width: 14px; /* 체크박스의 너비와 높이를 지정 */ 
+	height: 14px;
+	line-height: 14px; /* 체크표시 세로정렬을 위해 높이값과 일치 */ 
+	vertical-align: middle; 
+	border: 1px solid #cacece;
+	border-radius: 8px;	/* 모양 동그라미 */
+}
+
+input[type="radio"]:checked + label:before { /* 체크박스를 체크했을때 */
+	/* 체크박스는 위에서 이미 생성되었고, 속성을 다시 지정해주면 
+		더 나중에 지정된 속성대로 바뀌는 것을 이용하여 클릭 효과를 만든 것 */
+
+	content:'\25CF'; /* 체크표시 유니코드 사용 */
+	font-size: 6px;	/* 체크 크기*/
+	color: #A9CD0A;  	/* 체크 색깔 */
+	text-align: center;	/* 체크표시 가운데 정렬 */
+	border-color: #5A5555; 
+}
+
+
+/* 관심있는 제품 선택 */
+article .userInfoArea .userInfo_add .addBox .product {
+	margin-top: 10px;
+}
+
+article .userInfoArea .userInfo_add .addBox .product input {
+	width: 186px;
+	height: 26px;
+	padding: 5px 15px;
+	line-height: 26px;
+	
+	border: 1px solid #cacece;
+	font-weight: 600;
+	font-size: 14.3px;
+	color: #555;
+	cursor: text;	/* 커서모양 i */
+	letter-spacing: -0.3px;
+}
+
+
+/* ---------------------- userInfoArea - userInfo_agree ----------------------*/
+article .userInfoArea .userInfo_agree {
+	clear: both;
+    padding-top: 45px;
+}
+
+article .userInfoArea .userInfo_agree .agreeBox {
+	padding: 7px 0;
+}
+
+article .userInfoArea .userInfo_agree .agreeBox table th {
+	color: #222;
+}
+
+article .userInfoArea .userInfo_agree .agreeBox table tr .radioArea {
+	display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: #555;
+    font-size: 14.3px;
+}
+
+
+/* ---------------------- userInfoArea - userInfo_agree - BtnArea ----------------------*/
+.BtnArea {
+	margin-top: 35px;
+    text-align: center;
+}
+
+.BtnArea .styleBtn2 {
+	position: relative;
+	display: inline-block;
+	font-size: 14.3px;
+	text-align: center;
+	font-weight: 800;
+	line-height: 40px;
+	background-color: white;	/* 흰색 */
+	color: #555555;	/* 텍스트 색깔 */
+	border: 1px solid #999999;
+	
+	/* 애니메이션 */
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.BtnArea .styleBtn3 {
+	width: 138px;
+	height: 38px;
+	margin: 0 auto;
+}
+
+.BtnArea .styleBtn3:hover {
+	color: white;
+	box-shadow: 140px 0 0 0 #999999 inset;
+}
+
+.BtnArea .btnGreen {
+	width: 138px;
+	height: 38px;
+	margin: 0 auto;
+	
+	background-color: #A6CD48;	/* 초록색 */
+	color: white;	/* 텍스트 색깔 */
+	border: 1px solid #A6CD48;
+}
+
+.BtnArea .btnGreen:hover {
+	color: black;
+	box-shadow: 140px 0 0 0 rgba(255, 255, 255, 1) inset;
+}
+
+.BtnArea .styleBtn4 {
+	width: 178px;
+	height: 38px;
+	margin: 0 auto;
+	
+	background-color: #eeeeee;;	/* 회색 */
+	color: #555555;	/* 텍스트 색깔 */
+	border: 1px solid #dcdcdc;	/* 회색 */
+}
+
+.BtnArea .styleBtn4:hover {
+	color: white;
+	box-shadow: 180px 0 0 0 #999999 inset;
+	border: 1px solid #999999;	/* 회색 */
+}
+
+
+/* ------------------------------ userInfo_out --------------------------------*/
+article .userInfoArea .userInfo_out {
+	position: relative;
+    padding: 35px 40px;
+    margin-top: 80px;
+    background: #f9f9f9;
+}
+
+article .userInfoArea .userInfo_out h3 {
+	font-size: 14.5px;
+    color: #222222;
+    font-family: 'NotoL';
+    font-weight: 600;
+    border: none;
+    padding: 0;
+}
+
+article .userInfoArea .userInfo_out h3:before {
+	content: '';
+    display: inline-block;
+    width: 19px;
+    height: 21px;
+    vertical-align: top;
+    margin-right: 5px;
+    background: url(https://image.drjart.com/front/ko/images/mypage/ico_mypage.png) no-repeat 0 -58px;
+}
+
+article .userInfoArea .userInfo_out p {
+	margin-top: 10px;
+	font-family: 'NotoL';
+    color: #999999;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+article .userInfoArea .userInfo_out .BtnArea {
+	position: absolute;
+    right: 40px;
+    top: 50%;
+    margin-top: -17px;
+}

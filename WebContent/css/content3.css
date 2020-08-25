@@ -1,0 +1,470 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap');
+
+h1, h2, h3, h4, h5{
+	font-family: 'Noto Sans KR', sans-serif;
+} 
+
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	
+}
+
+
+.leftMenu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 89px;
+    text-align: center;
+    background: #fff;
+    border-right: 1px solid #dcdcdc;
+    z-index: 999;
+}
+
+#container{
+	position: relative;
+	padding-left: 90px;	
+	box-sizing: border-box;
+	padding-bottom: 120px;
+}
+
+#container::after{
+	content: "";
+    display: block;
+    clear: both;
+}
+
+.wideContent{
+	position: relative;
+    padding: 30px 60px;
+    box-sizing: border-box;
+}
+
+.upMenu {
+	position: relative;
+	z-index: 850px;
+	height:100px;
+	border-bottom: 1px solid #eeeeee;
+/*	background: gray; */
+	
+	
+	
+}
+
+.topTitle{
+	
+	padding-top:30px;
+	float: left;
+    display: inline-block; /*줄 바꿈x 크기설정o*/
+    margin-right: 45px;
+	font-size: 32px;
+    letter-spacing: -0.5px; /*폰트 간격*/
+    color: #222222;
+}
+
+.upMenu#up>ul{
+	position:relative;
+	float: left;
+	width: 300px;
+	height: 30px;
+	line-height: 120px;
+	
+}
+
+.upMenu>ul>li{
+	position:relative;
+	float: left;
+    margin-right: 25px;
+
+}
+
+.upMenu>ul>li#on>a{
+	color: #5D5D5D;
+	font-weight: 700;
+
+}
+
+.upMenu>ul>li>a{
+	color: #BDBDBD;
+
+}
+
+.upMenu>ul>li>a:hover{
+	color: #5D5D5D;
+
+}
+
+
+
+.contents {
+	clear: both;
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.conTitle{
+	padding: 60px 0 25px;
+    text-align: center;
+	font-size: 30px;
+	line-height:30px;
+	color: #222222;
+    letter-spacing: -0.4px;
+}
+
+
+.conTitle{
+	padding: 60px 0 25px;
+    text-align: center;
+	font-size: 30px;
+	line-height:30px;
+	color: #222222;
+    letter-spacing: -0.4px;
+}
+
+
+.conSub>ul{
+	text-align: center;
+}
+
+.conSub>ul>li{
+	display: inline-block;
+	padding: 0 12px;
+}
+
+
+.conSub>ul>li>a{	
+	color: #8C8C8C;	
+}
+
+.conSub>ul>li>a:hover{
+	text-decoration:underline;
+	color: black;	
+}
+
+.conSub>ul>li.on1>a{	
+	text-decoration:underline;
+	color: black;	
+}
+
+
+
+.conSub>ul::after{
+	content: "";
+    display: block;
+    clear: both;
+}
+
+
+.board{
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.listTotal{
+	margin-bottom: 15px;
+
+}
+
+.totalCnt{
+	font-size: 13px;
+    color: #555;
+    line-height: 35px;
+    text-indent: 5px;
+    float: left;
+    margin-top: 9px;
+}
+
+.sortArea div{
+	text-align: right;
+	position: absolute;
+	right: 0;
+}
+
+
+.searchText{
+	width: 210px;
+	
+}
+
+.searchText input[type=text] {
+    padding: 0;
+    padding-right: 30px;
+    padding-bottom:10px;
+    border: none;
+    border-bottom: 1px solid #dcdcdc;
+    background: none;
+    font-size: 13px;
+    text-indent: 0;
+    color: #999;
+    outline: none;
+}
+
+
+#serchBtn{
+	position: absolute;
+	right: 0;
+	top:0px;
+	display: block;
+    width: 25px;
+    height: 29px;
+    background: url(../img/search.svg) no-repeat;
+    background-size:20px;
+    color: transparent;
+}
+
+
+
+.listTotal::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.boardList{
+	margin-bottom:30px;
+	table-layout: fixed;
+    border-top: 1px solid #000;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    
+}
+
+thead th{
+	padding: 8px 15px;
+    font-size: 13px;
+    color: #222;
+	border-bottom: 1px solid #EAEAEA;
+    
+}
+
+
+.a1_1{
+	text-align: left;
+}
+
+
+tbody td{
+    font-size:13px;
+    color: #999;
+    white-space: nowrap;
+}
+
+tbody tr:last-child td{
+	border-bottom: 1px solid #222222;
+}
+
+
+#listBox td{
+	padding: 14px 15px;
+    font-size: 13px;
+    color: #222;
+}
+
+
+.paging{
+	text-align: center;
+	margin-top: 40px;
+}
+
+.reviewBtn{
+	margin-top: 15px;
+    position: absolute;
+    bottom: -16px;
+    right: 0px;
+	width:130px;
+	height:40px;
+	background:black;
+	text-align:center;
+	font-size:15px;
+	line-height:40px;
+	color:white;
+	
+}
+
+.paging{
+	text-align: center;
+    font-size: 0;
+    line-height: 0;
+}
+
+.paging span.first {
+    margin-right: 9px;
+}
+.paging span.prev {
+    margin-right: 9px;
+}
+.paging span.next {
+    margin-right: 9px;
+}
+.paging span.last {
+    margin-right: 9px;
+}
+
+.paging .current {;
+    position: relative;
+    padding-right: 35px;
+    margin-right: 8px;
+    color: #222;
+}
+
+.paging a, .paging span {
+    display: inline-block;
+    height: 14px;
+    padding: 0 7px;
+  	font-size: 14px;
+    line-height: 14px;
+    vertical-align: middle;
+}
+
+.paging span.first, .paging span.prev, .paging span.next, .paging span.last {
+    padding: 0;
+}
+
+.paging .current::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -1px;
+    width: 20px;
+    height: 2px;
+    background: #dddddd;
+}
+
+
+
+
+
+
+
+
+
+
+#footer{
+	position: relative;
+	padding-left:90px;	
+	box-sizing: border-box;
+	padding-top: 60px;
+}
+
+#footer>div{
+	padding: 0 60px;
+}
+
+.footerT{
+	padding: 0 60px;
+	position:relative;
+	border-top: 1px solid #eeeeee;
+}
+
+#footer .foot_menu {
+    padding: 20px 0;
+}
+
+#footer .foot_menu ul {
+    margin-left: -10px;
+}
+
+.foot_menu li{
+	float: left;
+	margin-right: 20px;
+}
+
+#footer .sitemap {
+    position: absolute;
+    right: 325px;
+	width: 160px;
+    height: 100%;
+}
+
+#footer .familysite {
+    position: absolute;
+    right: 168px;
+ 	width: 150px;
+    height: 100%;
+}
+
+#footer .korean {
+    position: absolute;
+    right: 50px;
+ 	swidth: 110px;
+    height: 100%;
+}
+
+.foot_menu::after{
+	content: "";
+    display: block;
+    clear: both;
+}
+
+.footerM{
+	position: relative;
+    background: #f9f9f9;
+}
+
+.footInfo{
+	padding: 25px 0;
+    font-size: 12px;
+    line-height: 24px;
+    color: #999999;
+}
+
+.foot_sns {
+    position: absolute;
+    right: 55px;
+    top: 45px;
+}
+
+.foot_sns>a>img{
+	margin-right:20px;
+}
+
+.footerB{
+	background: #f9f9f9;
+    border-top: 1px solid #eeeeee;
+}
+
+.footMaker {
+	font-size: 12px;
+	color: #999999;
+    padding: 30px 0 70px;
+ 
+}
+
+
+.footMaker span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footMaker>ul>li {
+	float: left;
+    position: relative;
+    margin-right: 40px;
+    font-size: 11px;
+    line-height: 14px;
+    color: #999999;
+}
+
+

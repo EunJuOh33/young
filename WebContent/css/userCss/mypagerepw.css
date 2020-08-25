@@ -1,0 +1,257 @@
+/* -------------------------- wrap -------------------------- */
+
+#wrap {
+	height: 100%;	/* 100%는 부모기준 */
+	width: 100%;
+}
+
+
+/* -------------------------- container -------------------------- */
+#container {
+	position: relative;
+	padding-left: 90px;
+	padding-bottom: 120px;
+}
+
+
+/* -------------------------- wide_menu -------------------------- */
+.wide_menu {
+	position: relative;
+	height: 108px;
+	padding: 0 60px;
+	padding-top: 30px;
+}
+
+.wide_menu .menu {	
+	height: 40px;
+	min-width: 1000px;
+	/* width를 설정하면, 브라우저가 아무리 작아져도 그 너비를 유지한다. 
+		설정이 되어있지 않는 경우, min-width를 사용해서 지정한 크기 이하로 너비가 줄어들지 않도록 설정한다. */
+	padding: 20px 0 15px 0;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.wide_menu .menu h2 {
+	position: relative;
+	display: inline-block;
+	float: left;
+	margin-right: 45px;
+	font-size: 31px;
+	letter-spacing: -0.7px;
+}
+
+.wide_menu .menu h2 a {
+	color: #222222;
+	font-weight: 600;
+}
+
+.wide_menu .menu p {
+	display: inline-block;
+	margin-right: 17px;
+	height: 32px;
+	line-height: 40px;
+	padding-top: 8px;
+	font-size: 15px;
+	font-weight: 900;
+	text-shadow: 0.5px 0.5px #9999;
+}
+
+.wide_menu .menu p a {
+	color: #9999;
+	font-weight: 600;
+}
+
+.wide_menu .menu p #on {
+	color: #222222
+}
+
+/* -------------------------- article -------------------------- */
+@media all and (max-width: 1300px) {	
+/* 브라우저 너비가 1300px보다 작아질 때 이 쿼리가 실행됨 */
+/* @media: 미디어 쿼리가 시작됨을 선언 
+ * all 키워드 : 생략 가능하고, 생략했을 때 기본 값은 all 으로 처리
+ * width / height : 뷰포트의 너비와 높이. 
+ *					뷰포트의 크기는 HTML body 콘텐츠를 표시하는 영역으로 실제 스크린의 크기와는 다르다. 
+ *					반응형 웹 구현시 가장 일반적으로 사용하는 조건이 된다.
+ */
+	#container article {
+		margin: 0 105px;
+	}
+}
+
+article {
+	width: 980px;
+	margin: 0 auto;
+}
+
+article h2 {
+	display: block;
+	height: 30px;
+	padding: 60px 0 50px 0;
+	
+	text-align: center;
+	line-height: 30px;
+	font-size: 30px;
+	font-weight: 600;
+	color: #222222;	/* 이제부터 검정은 이 색깔 사용 */
+	letter-spacing: -1px;
+}
+
+article .tabSmallMenu {
+	height: 24px;
+	margin-bottom: 35px;
+}
+
+article .tabSmallMenu ul {
+	text-align: center;
+	height: 24px;
+}
+
+article .tabSmallMenu ul li {
+	display: inline-block;
+	height: 24px;
+	padding: 0 12px;
+	line-height: 24px;
+}
+
+article .tabSmallMenu ul li a {
+	color: #999999;
+	font-weight: 600;
+	font-size: 16px;
+	letter-spacing: -0.7px;
+	
+	cursor: pointer;
+}
+	
+article .tabSmallMenu ul .on a {
+	height: 23px;
+	line-height: 23px;
+	border-bottom: 1px solid black;
+	
+	color: #222222;
+}
+
+/* -------------------------- article - pwReConfirm -------------------------- */
+
+article .pwReConfirm {
+	/*height: 212px;	*/
+	padding-bottom: 110px;
+}
+
+article .pwReConfirm h3 {
+	height: 26px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #222222;
+	line-height: 26px;
+	font-size: 15.5px;
+	font-weight: 600;
+	color: #222222;
+	letter-spacing: -0.5px;
+}
+
+article .pwReConfirm .pwReConfirmForm {
+	/* height: 60px;	*/
+	padding-top: 20px;
+}
+
+article .pwReConfirm .pwReConfirmForm form {
+	width: 100%;
+}
+
+article .pwReConfirm .pwReConfirmForm form .fieldL {
+	float: left;
+	display: inline-block;
+	width: 147px;
+	height: 40px;
+	padding: 10px 0;
+	
+	line-height: 40px;
+	color: rgb(85, 85, 85);
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: -0.8px;
+}
+
+article .pwReConfirm .pwReConfirmForm form .fieldR {
+	float: both;
+	display: inline-block;
+	width: 833px;
+/*	height: 40px;	*/
+	padding: 10px 0;
+}
+
+article .pwReConfirm .pwReConfirmForm form .fieldR input {
+	display: inline-block;
+	float: left;
+	width: 232px;	/* 250 맞추기 */
+	height: 38px;	/* 40 맞추기 */
+	line-height: 40px;
+	padding: 0 8px;
+	outline: none;	/* input 박스에 focus했을 때 테두리가 굵게 변하는 효과가 사라진다. */
+	border: 1px solid #dcdcdc;
+	
+	color: #555;	/* input 안 글자 색 */
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+
+article .pwReConfirm .pwReConfirmForm form .fieldR input:focus {
+	border: 1px solid #222;
+}
+
+article .pwReConfirm .pwReConfirmForm form .fieldR .confirmBtn {
+	display: inline-block;
+	clear: both;
+	margin-left: 10px;
+	width: 118px;	/* 120 맞추기 */
+	height: 38px;	/* 40 맞추기 */
+	
+	font-size: 14.3px;
+	text-align: center;
+	font-weight: 800;
+	line-height: 40px;
+	letter-spacing: 0;
+	
+	/* 애니메이션 */
+	cursor: pointer;
+	transition: all 0.3s;	/* 모두 3초만에 바뀐다. */
+	background-color: #A6CD48;;	/* 원래 흰색 */
+	color: white;	/* 텍스트 색깔 */
+	border: 1px solid #A6CD48;;
+}
+
+article .pwReConfirm .pwReConfirmForm form .fieldR .confirmBtn:hover {
+	clear: both;
+	color: black;
+	box-shadow: 120px 0 0 0 rgba(255, 255, 255, 1) inset;	
+}
+
+article .pwReConfirm .pwReConfirmForm form .hideTx {
+	display: none;	/* block과 none */
+	height: 30px;
+	padding-left: 12px;
+
+	line-height: 30px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #fa5855;	/* 앞으로 빨간색은 이것으로 쓴다. */
+	letter-spacing: -0.2;
+}
+
+
+/* -------------------------- article - pwReConfirm - sub -------------------------- */
+article .pwReConfirm .pwReConfirmForm .sub {
+	height: 20px;
+	margin-top: 20px;
+	padding: 25px 40px;
+	line-height: 20px;
+	background-color: #f9f9f9;
+}
+
+article .pwReConfirm .pwReConfirmForm .sub p {
+	position: relative;
+	font-size: 11.5px;
+	font-weight: 600;
+	letter-spacing: -0.5px;
+	color: #999999;
+}

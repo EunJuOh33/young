@@ -1,0 +1,15 @@
+/* 10_2_로그인 */
+.login .pageTitArea .tit_en {margin-bottom:0;}
+.loginCon {margin:0 auto; padding-top:50px; width:420px; border-top:1px solid #222; border-bottom:1px solid #eeeeee;}
+.loginCon .login_cont {display:none; padding:40px 50px 60px;}
+.loginCon .login_cont.on {display:block;}
+.loginCon .login_cont .inp_text{margin-top:8px;}
+.loginCon .login_cont .inp_text:first-child{margin-top:0px;}
+.loginCon .login_cont .btn_wrap{margin-top:25px;}
+.loginCon .login_cont .btn_wrap .btn{min-width:100%;}
+.loginCon .login_cont .btn_wrap .btn:first-child{margin-bottom:8px;}
+.loginBox .loginInfo_find {padding-top:16px; text-align:center; font-size:0;}
+.loginBox .loginInfo_find li{position:relative; display:inline-block; text-align:center; vertical-align:top;font-size:13px; }
+.loginBox .loginInfo_find li:first-child{margin-right:15px; padding-right:15px; }
+.loginBox .loginInfo_find li:first-child:after{content:''; position:absolute; top:5px; right:0; width:1px; height:10px; background:#dcdcdc;}
+.loginBox .loginInfo_find li a {color:#999999;}

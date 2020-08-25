@@ -1,0 +1,784 @@
+* {	/* 기본 설정 */
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	letter-spacing: -1.1px;	/* 글자와 글자사이의 간격. 원래 폰트의 간격에서 -1.1px만큼 줄였다. */
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+img {
+	display: block;	/* 이미지는 사방으로 마진이 2정도 생긴다. 원래 이미지는 inline 요소인데 block으로 만들어준다. */
+	position: absolute; /* relative속성을 가진 부모요소를 기준으로 위치를 정한다. 심지어 부모 요소 위에 겹쳐서 배치할 수도 있다.*/
+}
+
+
+/* -------------------------- section -------------------------- */
+
+section {
+	width: 980px;
+	height: 120px;
+	margin: auto;
+	position: relative;	/* relative는 위치를 지정해주지 않으면 static과 같다. static은 문서에 기본적으로 표시되는 위치이다. */
+	/* 하지만 처음부터 absolute를 주면 화면 너비에 따라서 크기가 변하지 않는다. */
+	padding-left: 90px;	/* 왼쪽 메뉴 너비만큼 padding을 줬다. */
+}
+
+.clearFix::after {
+	content: "";
+    display: block;
+}
+
+section .joinSection_top .joinSection_img {
+	position: absolute;
+	left: 550px;
+	width: 57px;
+	height: 57px;
+}
+
+section .joinSection_top .joinSection_img #userIcon {
+	left: 18px;
+	top: 12px;
+}
+
+section .joinSection_top #icon {
+	position: absolute;
+	top: -25px;
+	padding-left: 90px;
+	left: 140px;
+}
+
+section .joinSection_top .joinSection_title {
+	position: absolute;
+	top: 65px;
+	left: 480px;	/* padding: 90px 한 것과 같다. */
+}
+
+section .joinSection_top .joinSection_title span {	/* 회원가입 글자 */
+	font-size: 47.5px;
+	color: #222222;
+}
+
+
+/* -------------------------- right_menu -------------------------- */
+
+.right_menu {
+	position: relative;
+	height: 87px;
+	top: 0;
+	padding-left: 1400px;
+}
+
+.right_menu .order {
+	position: absolute;
+	bottom: 15px;
+	right: 62px;
+}
+
+.right_menu .order ol {
+	height: 28px;
+	width: 262px;
+	border-bottom: 1px solid #dcdcdc;	/* 실선 */
+}
+
+.right_menu .order ol li {
+	float: left;	/* li 메뉴들이 서로 옆에 붙도록 한다. */
+	height: 20px;
+	width: 70px;
+	padding: 0 2px 8px 2px;
+	margin-left: 20px;
+	display: list-item;
+	
+	font-weight: 600;
+	font-size: 14px;
+	color: #dcdcdc; 
+}
+
+.right_menu .order ol .first {
+	margin-left: 0;	/* '01이용약관' 왼쪽 마진 없애준다. */
+}
+
+.right_menu .order ol .on {	/* 현재 페이지 - 이용약관 */
+/*	margin-bottom: -1px; */
+	color: #222222;
+	border-bottom: 1px solid #222222;
+}
+
+
+/* ---------------------------- JoinForm ---------------------------- */
+article {
+	position: relative;
+	top: 60px;
+	width: 980px;
+	padding-left: 90px;
+	margin: 0 auto;
+	margin-bottom: 120px;
+}
+
+@media all and (max-width: 1300px) {	
+/* 브라우저 너비가 1300px보다 작아질 때 이 쿼리가 실행됨 */
+	article {
+		margin: 0 105px;
+		margin-bottom: 120px;
+	}
+	section {
+		margin: 0 105px;
+	}
+}
+
+article form {
+	position: relative;
+}
+
+/* ---------------------------- joinArticle_ 왼쪽 ---------------------------- */
+article .joinArticle_L::before, article .joinArticle_L::after {
+	content: "";
+    display: block;
+}
+
+article .joinArticle_L::after {
+	clear: both;
+}
+
+
+article .joinArticle_L {
+	position: relative;
+	float: left;
+	height: 100%;
+	top: 0;
+	left: 0;
+	width: 660px;
+}
+
+article select {
+	cursor: pointer;
+}
+
+article .joinArticle_L .joinArticle_title {	/* '회원정보 입력' 타이틀 */
+	position: relative;
+	height: 37px;
+	font-weight: 600;
+	color: #28283C;
+	border-bottom: 1px solid black;
+	
+	font-size: 15.5px;
+}
+
+article .joinArticle_L .L_form {	/* 이부분 height가 계속 변하게 된다. */
+	position: relative;
+	margin-top: 20px;
+	width: 660px;
+}
+
+article .joinArticle_L .L_form  ul {
+	position: relative;	/* 원래 relative*/
+	height: 40px;
+	padding: 10px 0;
+	font-weight: 700;
+	font-size: 14.3px;
+	color: #5A5555;
+}
+
+article .joinArticle_L .L_form  ul #info {	/* 정보 이름 */
+	float: left;
+	width: 132px;
+	height: 40px;
+	line-height: 40px;
+}
+
+article .joinArticle_L .L_form  ul #info span {	/* 별표 */
+	color: red;
+	margin-right: 5px;
+}
+
+article .joinArticle_L .L_form  ul #blank, #blank_select, #blank_name, #blank_select_birth, #blank_addr {
+	display: block;
+	position: relative;
+	left: 132px;
+	width: 528px;
+	height: 38px;
+	outline: none;
+}
+
+article .joinArticle_L .L_form  ul #blank input, #blank_name input {	/* 입력 상자 */
+	position: absolute;
+	left: 0;
+	width: 321px;
+	height: 26px;
+	padding: 5px 10px;
+	border: 1px solid #cacece;
+	outline: none;
+	
+	font-weight: 600;
+	font-size: 14.5px;
+	color: #5A5555;
+	letter-spacing: 0px;	/* 영어글자 간격이 너무 좁아져서 */
+	cursor: text;	/* 커서모양 i */
+}
+
+article .joinArticle_L .L_form input::placeholder {
+	color: #999999;
+  	font-size: 13.5px;
+  	font-weight: 800;
+  	letter-spacing: -0.7px;
+}
+
+#blank_name input {
+	width: 198px;
+}
+
+article .joinArticle_L .L_form  ul #blank .pw {
+	letter-spacing: 2px;	/* 패스워드 글자 간격 */
+}
+
+article .joinArticle_L .L_form #ex {	/* 패스워드 밑 작은글자 */
+	display: inline-block;
+	position: relative;
+	top: -12px;
+	left: 132px;
+	width: 528px;
+	
+	font-weight: 800;
+	color: #999999;
+}
+
+
+/*  숨겨진 <small>태그 */
+article .joinArticle_L .L_form .hideTx {
+	display: none;	/* inline-block | none */
+	position: relative;
+	top: -10px;
+	left: 132px;
+	width: 518px;
+	padding-left: 10px;
+	margin-bottom: 5px;
+	
+	font-size: 11.5px;
+	font-weight: 600;
+	color: #FA5855;
+	letter-spacing: -0.5px;
+}
+
+
+/* 아이디 '중복확인' 버튼 */
+article .joinArticle_L .L_form  ul .btn_dup {
+	position: absolute;	/* 부모인 ul 기준으로 위치설정 */
+	left: 355px;
+	width: 120px;
+	height: 36px;
+	
+	font-size: 14.3px;
+	text-align: center;
+	font-weight: 800;
+	line-height: 40px;
+	
+	/* 애니메이션 */
+	cursor: pointer;
+	transition: all 0.3s;
+	background-color: #FFFFFF;	/* 원래 흰색 */
+	color: #555555;	/* 텍스트 색깔 */
+	border: 1px solid #999999;
+}
+
+article .joinArticle_L .L_form  ul .btn_dup:hover {
+	color: white;
+	box-shadow: 120px 0 0 0 rgba(153, 153, 153, 1) inset;	/* 회색 그림자 */
+}
+
+
+/* 생년월일 입력 */
+article .joinArticle_L .L_form  ul #blank_select_birth .user_birth {
+	position: absolute;
+	left: 0px;
+	width: 105px;
+	height: 38px;
+	padding: 5px 10px;
+	border: 1px solid #cacece;
+	outline: none;
+	
+	font-weight: 600;
+	font-size: 14.3px;
+	color: #5A5555;
+	letter-spacing: -0.1px;
+}
+
+article .joinArticle_L .L_form  ul #blank_select_birth .user_month {
+	left: 115px;	/* 여백 10px */
+}
+
+article .joinArticle_L .L_form  ul #blank_select_birth .user_day {
+	left: 230px;
+}
+
+
+/* 핸드폰 입력 */
+article .joinArticle_L .L_form  ul #blank_select select {	/* 핸드폰 앞번호 */
+	position: absolute;
+	left: 0px;
+	width: 160px;
+	height: 38px;
+	padding: 5px 10px;
+	border: 1px solid #cacece;
+	outline: none;
+	
+	font-weight: 600;
+	font-size: 14.3px;
+	color: #5A5555;
+	letter-spacing: -0.1px;	/* 영어글자 간격이 너무 좁아져서 */
+}
+
+article .joinArticle_L .L_form  ul #blank_select div {
+	position: absolute;
+	left: 160px;
+	width: 368px;
+	height: 40px;	
+}
+
+article .joinArticle_L .L_form  ul #blank_select div span, /* 핸드폰 '-', email '@' */
+#blank_select_email div span {	
+	display: block;
+	position: relative;
+	float: left;
+	width: 24px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+}
+
+article .joinArticle_L .L_form  ul #blank_select div input,	/* 핸드폰, 이메일 입력 상자 */
+ul #blank_select_email div input,
+ul #blank_addr .addr_b,
+ul #blank_addr div input {	
+	position: relative;
+	float: left;
+	width: 138px;
+	height: 26px;
+	padding: 5px 10px;
+	border: 1px solid #cacece;
+	outline: none;
+	
+	font-weight: 600;
+	font-size: 14.3px;
+	color: #5A5555;
+	letter-spacing: -0.1px;
+	cursor: text;
+}
+
+
+/* 이메일 입력 */
+article .joinArticle_L .L_form  ul #blank_select_email div {
+	position: absolute;
+	left: 132px;
+	width: 354px;
+	height: 40px;	
+}
+
+article .joinArticle_L .L_form  ul #blank_select_email select {
+	position: relative;
+	left: 354px;
+	width: 160px;
+	height: 38px;
+	padding: 5px 10px;
+	border: 1px solid #cacece;
+	
+	font-weight: 600;
+	font-size: 14.3px;
+	color: #5A5555;
+	letter-spacing: -0.1px;
+}
+
+article .joinArticle_L .L_form ul #blank_select_email #span_small {
+	width: 10px;
+}
+
+
+/* 주소 입력 */
+article .joinArticle_L .L_form  .address {
+	height: 130px;
+	padding-bottom: 0px;
+}
+
+article .joinArticle_L .L_form ul #blank_addr {
+	width: 528px;
+}
+
+article .joinArticle_L .L_form ul #blank_addr div {
+	position: relative;
+	height: 38px;
+}
+
+article .joinArticle_L .L_form ul #blank_addr div input {
+	position: absolute;
+	left: 0;
+	width: 138px;
+}
+
+article .joinArticle_L .L_form ul #blank_addr .addr_b {	/* 주소창 맨 밑 텍스트박스 2개 */
+	position: relative;
+	width: 506px;
+	margin-top: 8px;
+}
+
+article .joinArticle_L .L_form ul #blank_addr div .btn_addr {	/* 우편번호 검색 버튼 */
+	position: absolute;	/* 부모인 div 기준으로 위치설정 */
+	left: 170px;
+	width: 120px;
+	height: 36px;
+	
+	font-size: 14.3px;
+	text-align: center;
+	font-weight: 800;
+	line-height: 36px;
+	
+	/* 애니메이션 */
+	cursor: pointer;
+	transition: all 0.3s;
+	background-color: #FFFFFF;	/* 원래 흰색 */
+	color: #555555;	/* 텍스트 색깔 */
+	border: 1px solid #999999;
+}
+
+article .joinArticle_L .L_form ul #blank_addr div .btn_addr:hover {
+	color: white;
+	box-shadow: 120px 0 0 0 rgba(153, 153, 153, 1) inset;	/* 회색 그림자 */
+}
+
+
+/* ---------------------------- 버튼 ---------------------------- */
+article .joinArticle_B {
+	position: relative;
+	width: 980px;
+	height: 85px;
+	clear: both;
+}
+
+article .joinArticle_B .joinBtn {
+	width: 285px;
+	height: 85px;
+	position: relative;
+	margin: 0 auto;
+}
+
+article .joinArticle_B .joinBtn .btn_all {
+	position: absolute;	/* 부모인 .joinBtn 기준으로 위치설정 */
+	top: 45px;
+	width: 138px;
+	height: 38px;
+	font-size: 14.3px;
+	text-align: center;
+	font-weight: 800;
+	line-height: 40px;
+	
+	/* 애니메이션 */
+	cursor: pointer;	/* 커서를 올리면 커서가 포인터 모양으로 변한다. */
+	transition: all 0.3s;	/* 모두 0.3초만에 바뀐다. */
+}
+
+article .joinArticle_B .joinBtn .btn_join {	/* '회원가입' 버튼 */
+	left: 0;
+	background-color: #A6CD48;	/* 원래 초록색 */
+	color: white;	/* 텍스트 색깔 */
+	border: 1px solid #A6CD48;
+}
+
+article .joinArticle_B .joinBtn .btn_join:hover {
+	color: black;
+	box-shadow: 140px 0 0 0 rgba(255, 255, 255, 1) inset;	
+	/* 오른쪽 방향으로 140px만큼 흰색 그림자를 만든다. (버튼의 width와 border 합한 값이 140px)
+		inset은 안쪽만 채운다는 의미, 만약 -140px이라면 왼쪽 방향으로 그림자가 만들어진다. */
+}
+
+article .joinArticle_B .joinBtn .btn_cancel {	/* '취소' 버튼 */
+	left: 145px;
+	background-color: #FFFFFF;	/* 원래 흰색 */
+	color: #555555;	/* 텍스트 색깔 */
+	border: 1px solid #999999;
+}
+
+article .joinArticle_B .joinBtn .btn_cancel:hover {
+	color: white;
+	box-shadow: 140px 0 0 0 rgba(153, 153, 153, 1) inset;	/* 회색 그림자 */
+}
+
+
+
+/* ---------------------------- joinArticle_ 오른쪽 ---------------------------- */
+article .joinArticle_R {
+	position: absolute;
+	left: 660px;
+	width: 280px;
+	height: 640px;
+	margin-left: 40px;
+	
+	font-weight: 700;
+	font-size: 14.3px;
+	color: #5A5555;
+}
+
+article .joinArticle_R .joinArticle_title {	/* '추가정보 입력' 타이틀 */
+	position: relative;
+	height: 37px;
+	font-weight: 600;
+	color: #28283C;
+	border-bottom: 1px solid black;
+	
+	font-size: 15.5px;
+}
+
+article .joinArticle_R .R_form {
+	position: relative;
+	width: 278px;	/* border까지 합하면 280px */
+	height: 600px;
+	border-left: 1px solid #cacece;
+	border-right: 1px solid #cacece;
+	border-bottom: 1px solid #cacece;
+}
+
+article .joinArticle_R .R_form p {	/* 맨 위 작은 글씨 */
+	display: block;
+	position: relative;
+	top: 37px;
+	margin: 0 auto;	/* width가 220px이라서 양 옆 마진은 29가 된다. */
+	width: 220px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #cacece;
+	
+	color: #9C999F;
+	font-size: 13px;
+	font-weight: 700; 
+	line-height: 22px;
+}
+
+article .joinArticle_R .R_form .R_check1 {	/* 성별, 관심제품 */
+	position: absolute;
+	top: 124px;
+	width: 220px;
+	height: 278px;
+	margin: 0 29px;
+	padding-top: 25px;	
+}
+
+/* ---------------------------- joinArticle_ 오른쪽 남여 라디오 체크 ---------------------------- */
+article .joinArticle_R .R_form .R_check1 ul {
+	position: relative;
+	width: 220px;
+	height: 111px;
+	margin-bottom: 28px;
+}
+
+article .joinArticle_R .R_form .R_check1 ul #check_info {
+	padding-bottom: 15px;
+}
+
+article .joinArticle_R .R_form .R_check1 ul #check_gender,
+article .joinArticle_R .R_form .R_check1 ul #check_genderN {
+	float: left;
+	width: 96px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+article .joinArticle_R .R_form .R_check1 ul #check_genderN {
+	margin-top: 10px;
+}
+
+article .joinArticle_R label, input {
+	cursor: pointer;
+}
+
+article .joinArticle_R input[type="radio"] { /* 실제 라디오 박스는 화면에서 숨김 */ 
+	/* overflow는 이 속성이 지정된 요소의 내용(content)이 요소의 크기보다 더 클 때
+		화면에 어떻게 보여줄지 설정. hidden은 넘어가는 것을 보여주지 않는다. */
+	width: 0;	
+	height: 0; 
+	border: 0;
+	overflow: hidden;  
+}
+
+article .joinArticle_R ul input[type="radio"] + label:before { /* 가짜 라디오 박스 - 체크하기 전 */ 
+	/* :before은 요소의 콘텐츠 시작 부분에 생성된 콘텐츠를 추가한다. */
+	/* + 는 '인접형제 선택자'. 같은 부모를 가지고 바로 앞뒤로 올 때 
+		input태그는 label:before을 선택해주기만 한다. 쉼표(,)와 다르다. */
+		
+	content: ' '; 
+	display: inline-block; /* width, height만큼 content공간 차지 */
+	margin: -3px 0 0 -4px;	/* 체크박스 label 안에서의 위치 조절 */
+	width: 12.7px; /* 체크박스의 너비와 높이를 지정 */ 
+	height: 13px;
+	line-height: 13px; /* 체크표시 세로정렬을 위해 높이값과 일치 */ 
+	vertical-align: middle; 
+	border: 1px solid #cacece;
+	padding-right: 1.3px;
+	padding-bottom: 1px;
+	border-radius: 8px;	/* 모양 동그라미 */
+}
+
+article .joinArticle_R ul input[type="radio"]:checked + label:before { /* 체크박스를 체크했을때 */
+	/* 체크박스는 위에서 이미 생성되었고, 속성을 다시 지정해주면 
+		더 나중에 지정된 속성대로 바뀌는 것을 이용하여 클릭 효과를 만든 것 */
+
+	content:'\25CF'; /* 체크표시 유니코드 사용 */ 
+	font-size: 11.4px;	/* 체크 크기*/
+	color: #A9CD0A;  	/* 체크 색깔 */
+	text-align: center;	/* 체크표시 가운데 정렬 */
+	border-color: #5A5555; 
+}
+
+
+/* ---------------------------- joinArticle_R 관심있는 제품 ---------------------------- */
+article .joinArticle_R .R_form .R_check1 ul select {	/* 선택 박스 */
+	width: 218px;
+	height: 40px;
+	padding: 5px 10px;
+	border: 1px solid #cacece;
+	outline: none;
+	
+	appearance: none;  
+	
+	font-weight: 700;
+	font-size: 14.5px;
+	color: #5A5555;
+}
+
+article .joinArticle_R .R_form .R_check1 ul select:hover {
+	color: black;
+}
+
+article .joinArticle_R .R_form .R_check1 ul select:onclick {
+	border: 1px solid #555555;
+}
+
+article .joinArticle_R .R_form .R_check1 ul option:hover {
+	border: 1px solid #555555;
+    border-top: none;	
+    background-color: #F9F9F9;
+}
+
+
+
+/* ---------------------------- joinArticle_R 오른쪽 수신동의 체크 ---------------------------- */
+article .joinArticle_R .R_form .R_check2 {	/* 수신동의 체크 */
+	position: absolute;
+	top: 427px;
+	width: 220px;
+	height: 97px;
+	padding: 38px 29px;	/* padding부분은 백그라운드 컬러가 나오고, margin부분은 안나온다. */
+	background-color: #F9F9F9;
+	
+	font-weight: 700;
+	font-size: 14.3px;
+	color: #5A5555;
+}
+
+article .joinArticle_R .R_form .R_check2 div {
+	position: relative;
+	margin: 10px 0;
+}
+
+article .joinArticle_R .R_check2 input[type="checkbox"] { /* 실제 라디오 박스는 화면에서 숨김 */ 
+	/* overflow는 이 속성이 지정된 요소의 내용(content)이 요소의 크기보다 더 클 때
+		화면에 어떻게 보여줄지 설정. hidden은 넘어가는 것을 보여주지 않는다. */
+	width: 0;	
+	height: 0; 
+	border: 0;
+	overflow: hidden;  
+}
+
+article .joinArticle_R .R_check2 input[type="checkbox"] + label:before { /* 가짜 라디오 박스 - 체크하기 전 */ 
+	/* :before은 요소의 콘텐츠 시작 부분에 생성된 콘텐츠를 추가한다. */
+	/* + 는 '인접형제 선택자'. 같은 부모를 가지고 바로 앞뒤로 올 때 
+		input태그는 label:before을 선택해주기만 한다. 쉼표(,)와 다르다. */
+		
+	content: ' '; 
+	display: inline-block; /* width, height만큼 content공간 차지 */
+	margin: -3px 0 0 -4px;	/* 체크박스 label 안에서의 위치 조절 */
+	width: 12.7px; /* 체크박스의 너비와 높이를 지정 */ 
+	height: 13px;
+	line-height: 13px; /* 체크표시 세로정렬을 위해 높이값과 일치 */ 
+	vertical-align: middle; 
+	border: 1px solid #cacece;
+	padding-right: 1.3px;
+	padding-bottom: 1px;
+}
+
+article .joinArticle_R .R_check2 input[type="checkbox"]:checked + label:before { /* 체크박스를 체크했을때 */
+	/* 체크박스는 위에서 이미 생성되었고, 속성을 다시 지정해주면 
+		더 나중에 지정된 속성대로 바뀌는 것을 이용하여 클릭 효과를 만든 것 */
+
+	content: '\2714'; /* 체크표시 유니코드 사용 */ 
+	font-size: 11px;	/* 체크 크기*/
+	color: #A9CD0A;  	/* 체크 색깔 */
+	text-align: center;	/* 체크표시 가운데 정렬 */
+	border-color: #5A5555; 
+}
+
+
+/* -------------------------- 모달창 -------------------------- */
+
+#modal_cancel {
+	display: none;	
+	position: relative;	/* z-index는 relative나 absolute일 때 동작 */
+	top: -1144px; /* body의 height 가 1144px */
+	width: 100%;
+	height: 100%;
+	z-index: 1;	/* 원래 화면보다 앞에 나오도록 */
+}
+
+#modal_cancel .modal_content {
+	position: relative;
+	margin: 0 auto;
+	padding: 20px 40px;
+	width: 320px;
+	height: 170px;
+	background: white;
+}
+
+#modal_cancel h2 {
+	margin-top: 47px;
+	text-align: center;
+	font-size: 15.5px;
+	font-weight: 600;
+	color: #28283C;  
+}
+
+#modal_cancel #btn_off {	/* 버튼 */
+	position: relative;
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 138px;
+	height: 38px;
+	font-size: 14.3px;
+	text-align: center;
+	font-weight: 800;
+	line-height: 40px;
+	background-color: #A6CD48;	/* 원래 초록색 */
+	color: white;	/* 텍스트 색깔 */
+	border: 1px solid #A6CD48;
+	
+	/* 애니메이션 */
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+#modal_cancel #btn_off:hover {
+	color: black;
+	box-shadow: 140px 0 0 0 rgba(255, 255, 255, 1) inset;	
+}
+
+#modal_cancel .modal_layer {	/* 검은 배경 */
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;	/* 부모 태그의 100% */
+	  height: 100%;
+	  background: rgba(0, 0, 0, 0.5);	/* 검은색 투명도 50 */
+	  z-index: -1;	/* modal_content보다 뒤로 가도록 */
+}   

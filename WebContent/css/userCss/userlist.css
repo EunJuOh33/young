@@ -1,0 +1,322 @@
+/* -------------------------- wide_menu -------------------------- */
+.wide_menu {
+	position: relative;
+	height: 108px;
+	padding: 0 60px;
+	padding-top: 30px;
+}
+
+.wide_menu .menu {	
+	height: 40px;
+	min-width: 1000px;
+	/* width를 설정하면, 브라우저가 아무리 작아져도 그 너비를 유지한다. 
+		설정이 되어있지 않는 경우, min-width를 사용해서 지정한 크기 이하로 너비가 줄어들지 않도록 설정한다. */
+	padding: 20px 0 15px 0;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.wide_menu .menu h2 {
+	position: relative;
+	display: inline-block;
+	float: left;
+	margin-right: 45px;
+	font-size: 31px;
+	letter-spacing: -0.7px;
+}
+
+.wide_menu .menu h2 a {
+	color: #222222;
+	font-weight: 600;
+}
+
+.wide_menu .menu p {
+	display: inline-block;
+	margin-right: 17px;
+	height: 32px;
+	line-height: 40px;
+	padding-top: 8px;
+	font-size: 15px;
+	font-weight: 900;
+	text-shadow: 0.5px 0.5px #9999;
+}
+
+.wide_menu .menu p a {
+	color: #9999;
+	font-weight: 600;
+}
+
+.wide_menu .menu p #on {
+	color: #222222
+}
+
+/* -------------------------- article - useraListArea -------------------------- */
+#container {
+	padding-bottom: 0;	
+}
+
+#container article .userListArea {
+	margin: 15px 0 30px 0;
+	border-top: 1px solid #222222;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+#container article .userListArea table {
+	width: 100%;
+	border-collapse: collapse;
+	/* collapse : 표(table)의 테두리와 셀(td)의 테두리 사이의 간격을 없앤다. 겹치는 부분은 한 줄로 나타낸다.*/
+	border-spacing: 0;
+	box-sizing: border-box;
+	/* box-sizing 속성을 border-box로 지정하면  테두리를 포함한 크기를 지정할 수 있다. */
+	table-layout: fixed;
+	/* 데이터가 길어져서 지정한 너비 이상으로 늘어나는 것을 방지. 
+	 * 한글 텍스트는 지정한 너비에서 줄바꿈이 일어난다. */
+	word-break: break-all;
+	/* 테이블 레이아웃을 fixed했을 때, 영어텍스트가 길어지면 테이블 위로 지나간다.
+	 * 줄바꿈 되도록 하기 위해 지정함 */
+}
+
+#container article .userListArea table caption {
+	visibility: hidden;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+
+#container article .userListArea table thead tr {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#container article .userListArea table thead tr .th_thumb {
+	height: 20px;
+	width: 60px;
+	padding: 11px 20px 9px 20px;
+}
+
+#container article .userListArea table thead tr .th_id {
+	height: 20px;
+	width: 362px;
+	padding: 11px 28px 9px 20px;
+}
+
+#container article .userListArea table thead tr .th_name {
+	height: 20px;
+	width: 150px;
+	padding: 11px 60px 9px 60px;
+}
+
+#container article .userListArea table thead tr .th_btn {
+	height: 20px;
+	width: 160px;
+	padding: 11px 20px 9px 20px;
+}
+
+/* --------- tbody --------- */
+#container article .userListArea table tbody tr td {
+	border-top: 1px solid #dcdcdc;
+	padding: 15px 0;
+	height: 30px;
+	line-height: 30px;
+}
+
+#container article .userListArea table tr  {
+	text-align: center;
+}
+
+#container article .userListArea table tbody tr .td_id {
+	text-align: left;
+	padding-left: 90px;
+	padding-right: 30px;
+}
+
+#container article .userListArea table tbody tr .td_id a {
+	font-weight: 600;
+	color: #222;
+}
+
+#container article .userListArea table tbody tr .td_id a:hover {
+	color: #A6CD48;
+}
+
+#container article .userListArea table tbody tr .td_name {
+	padding-left: 40px;
+	padding-right: 40px;
+	text-align: center;
+	font-weight: 500;
+	text-shadow: 0.2px 0.4px #dcdcdc;
+	/* text-shadow:가로방향길이 세로방향길이 흐림의 크기 그림자색 */
+}
+
+#container article .userListArea table tbody tr .td_btn {
+	padding: 10px 60px;
+	text-align: right;
+}
+
+#container article .userListArea table tbody tr .td_btn .icon_del {
+	border: none;
+    outline: none;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    background-color: transparent;
+    background: url("https://image.drjart.com/front/ko/images/common/ico_btnDelete_gray.png") no-repeat center;
+    cursor: pointer;
+}
+
+#container article .userListArea table tbody tr .td_btn .icon_del:hover {
+	background: url("https://image.drjart.com/front/ko/images/common/ico_btnDelete.png") no-repeat center;
+	/* 아이콘 자체를 바꿔버림. color를 바꿔도 button 색깔은 투명이라서 변하지 않는다. */
+}
+
+
+/* --------- tbody - 체크박스 디자인 --------- */
+article .userListArea table input[type="checkbox"] {
+	/* overflow는 이 속성이 지정된 요소의 내용(content)이 요소의 크기보다 더 클 때
+		화면에 어떻게 보여줄지 설정. hidden은 넘어가는 것을 보여주지 않는다. */
+	width: 0;	
+	height: 0; 
+	border: 0;
+	overflow: hidden;
+}
+
+article .userListArea table label {
+	display: inline-block;
+	position: relative;
+	height: 16px;
+	width: 16px;
+	cursor: pointer;
+}
+
+article .userListArea table label .blind {
+	visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+article .userListArea table input[type="checkbox"] + label:before {
+	/* :before은 요소의 콘텐츠 시작 부분에 생성된 콘텐츠를 추가한다. */
+	content: ' '; 
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	line-height: 14px; /* 세로정렬을 위해 높이값과 일치 */ 
+	margin: 0 auto;
+	margin-top: -4px;
+	padding-right: 1px;
+	vertical-align: middle; 
+	border: 1px solid #999;
+}
+
+article .userListArea table input[type="checkbox"]:checked + label:before {
+	content: '\2714'; /* 체크표시 유니코드 사용 */ 
+	font-size: 11.5px;	/* 체크 크기*/
+	color: #555;  	/* 체크 색깔 */
+	text-align: center;	/* 체크표시 가운데 정렬 */
+	border: 1px solid #555;
+}
+
+
+/* -------------------------- article - paging -------------------------- */
+#container article .paging {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+#container article .paging span {
+	display: inline-block;
+	height: 14px;
+	font-size: 14px;
+	line-height: 14px;
+	vertical-align: middle;
+}
+
+#container article .paging a {
+	padding: 0 7px;
+	color: #999;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+#container article .paging a img {
+	vertical-align: top;
+}
+
+#container article .paging span.first {
+	width: 13px;
+	margin-right: 9px;
+}
+
+#container article .paging span.prev {
+	width: 8px;
+	margin-right: 9px;
+}
+
+#container article .paging span.current {
+	position: relative;
+	/* padding-right: 35px; */
+	padding-left: 7px;
+	padding-right: 7px;
+    /* margin-right: 8px; */
+    color: #222;
+}
+
+/* 
+.paging .current:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -1px;
+    width: 20px;
+    height: 2px;
+    background: #dddddd;
+}
+*/
+
+#container article .paging span.next {
+	width: 8px;
+	margin-left: 9px;
+}
+
+#container article .paging span.last {
+	width: 13px;
+	margin-left: 9px;
+}
+
+
+/* -------------------------- article - delBtn -------------------------- */
+#container article .delBtn {
+	text-align: center;	/* inline-block일 때 먹힌다. */
+}
+
+#container article .delBtn .styleBtn3 {
+	position: relative;
+	display: inline-block;
+	width: 198px;
+	height: 38px;
+	font-size: 14.3px;
+	text-align: center;
+	font-weight: 800;
+	line-height: 40px;
+	background-color: white;	/* 원래 흰색 */
+	color: #555555;	/* 텍스트 색깔 */
+	border: 1px solid #999999;
+	
+	/* 애니메이션 */
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+#container article .delBtn .styleBtn3:hover {
+	color: white;
+	box-shadow: 200px 0 0 0 #999999 inset;
+}

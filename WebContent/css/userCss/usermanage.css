@@ -1,0 +1,58 @@
+/* -------------------------- wrap -------------------------- */
+
+#wrap {
+	height: 100%;	/* 100%는 부모기준 */
+	width: 100%;
+}
+
+
+/* -------------------------- nav -------------------------- */
+nav {
+	position: fixed;
+	lift: 0;
+	top: 0;
+	width: 90px;
+	height:100%;
+}
+
+
+/* -------------------------- container -------------------------- */
+#container {
+	position: relative;
+	padding-left: 90px;
+	padding-bottom: 120px;
+}
+
+
+/* -------------------------- article -------------------------- */
+#container article {
+	width: 980px;
+	margin: 0 auto;
+	color: #555;
+}
+
+@media all and (max-width: 1300px) {	
+/* 브라우저 너비가 1300px보다 작아질 때 이 쿼리가 실행됨 */
+/* @media: 미디어 쿼리가 시작됨을 선언 
+ * all 키워드 : 생략 가능하고, 생략했을 때 기본 값은 all 으로 처리
+ * width / height : 뷰포트의 너비와 높이. 
+ *					뷰포트의 크기는 HTML body 콘텐츠를 표시하는 영역으로 실제 스크린의 크기와는 다르다. 
+ *					반응형 웹 구현시 가장 일반적으로 사용하는 조건이 된다.
+ */
+	#container article {
+		margin: 0 105px;
+	}
+}
+
+#container article h2 {
+	display: block;
+	height: 30px;
+	padding: 60px 0 25px 0;
+	
+	text-align: center;
+	line-height: 30px;
+	font-size: 30px;
+	font-weight: 600;
+	color: #222222;	/* 이제부터 검정은 이 색깔 사용 */
+	letter-spacing: -1px;
+}

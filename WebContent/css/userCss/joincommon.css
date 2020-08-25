@@ -1,0 +1,66 @@
+* {	/* 기본 설정 */
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	letter-spacing: -1.1px;	/* 글자와 글자사이의 간격. 원래 폰트의 간격에서 -1.1px만큼 줄였다. */
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+img {
+	display: block;	/* 이미지는 사방으로 마진이 2정도 생긴다. 원래 이미지는 inline 요소인데 block으로 만들어준다. */
+	position: absolute; /* relative속성을 가진 부모요소를 기준으로 위치를 정한다. 심지어 부모 요소 위에 겹쳐서 배치할 수도 있다.*/
+}
+
+
+/* -------------------------- header -------------------------- */
+
+header {
+	position: relative;
+	height: 87px;
+	top: 0;
+	padding-left: 1400px;
+}
+
+header .order {
+	position: absolute;
+	bottom: 15px;
+	right: 62px;
+}
+
+header .order ol {
+	height: 28px;
+	width: 262px;
+	border-bottom: 1px solid #dcdcdc;	/* 실선 */
+}
+
+header .order ol li {
+	float: left;	/* li 메뉴들이 서로 옆에 붙도록 한다. */
+	height: 20px;
+	width: 70px;
+	padding: 0 2px 8px 2px;
+	margin-left: 20px;
+	display: list-item;
+	
+	font-weight: 600;
+	font-size: 14px;
+	color: #dcdcdc; 
+}
+
+header .order ol .first {
+	margin-left: 0;	/* '01이용약관' 왼쪽 마진 없애준다. */
+}
+
+header .order ol .on {	/* 현재 페이지 - 이용약관 */
+/*	margin-bottom: -1px; */
+	color: #222222;
+	border-bottom: 1px solid #222222;
+}

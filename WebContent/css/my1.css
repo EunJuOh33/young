@@ -1,0 +1,666 @@
+@charset "UTF-8";
+
+
+h1, h2, h3, h4, h5{
+	font-family: 'Noto Sans KR', sans-serif;
+} 
+
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	
+}
+
+
+.leftMenu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 89px;
+    text-align: center;
+    background: #fff;
+    border-right: 1px solid #dcdcdc;
+    z-index: 999;
+}
+
+#container{
+	position: relative;
+	padding-left: 90px;	
+	box-sizing: border-box;
+}
+
+#container::after{
+	content: "";
+    display: block;
+    clear: both;
+}
+
+.wideContent{
+	position: relative;
+    padding: 30px 60px;
+    box-sizing: border-box;
+}
+
+
+.upMenu {
+	position: relative;
+	z-index: 850px;
+	height: 76px;
+	/* border-bottom: 1px solid #eeeeee;	*/
+	/* background: gray; */
+}
+
+.upMenu .menu {
+	height: 40px;
+    min-width: 1000px;
+    padding: 20px 0 15px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.topTitle{
+	position: relative;
+	float: left;
+    display: inline-block; /*줄 바꿈x 크기설정o*/
+    margin-right: 45px;
+	font-size: 31px;
+    letter-spacing: -0.7px; /*폰트 간격*/
+}
+
+
+.topTitle>a{
+	font-weight: 600;
+	text-decoration: none;
+	color:#222222;
+}
+
+.upMenu .menu p {
+	display: inline-block;
+	margin-right: 17px;
+	height: 32px;
+	line-height: 40px;
+	padding-top: 8px;
+	font-size: 15px;
+	font-weight: 900;
+	text-shadow: 0.5px 0.5px #9999;
+}
+
+.upMenu .menu p a {
+	color: #9999;
+	font-weight: 600;
+}
+
+.upMenu .menu p #on {
+	color: #222222;
+	font-weight: 600;
+}
+
+
+
+/* .upMenu#up>ul{
+	position:relative;
+	float: left;
+	width: 300px;
+	height: 30px;
+	line-height: 120px;
+	
+}
+
+.upMenu>ul>li{
+	position:relative;
+	float: left;
+    margin-right: 25px;
+
+}
+
+.upMenu>ul>li#on>a{
+	color: #5D5D5D;
+	font-weight: 700;
+
+}
+
+.upMenu>ul>li>a{
+	color: #BDBDBD;
+
+}
+
+.upMenu>ul>li>a:hover{
+	color: #5D5D5D;
+}
+*/
+
+
+/* 마이페이지 콘텐츠 시작  */
+
+.contents{
+	position: relative;
+	max-width: 980px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	}
+
+.mylevel{
+	padding: 60px 0 20px;
+    text-align: center;
+}
+
+.mylevel>img{
+	display: block;
+    margin: 0 auto;
+    width: 108px;
+    height: 108px;
+}
+
+.hello{
+	margin-top: 13px;
+    line-height: 26px;
+}
+
+
+
+
+/* 위시리스트 */
+
+
+.wishList{
+	margin-top:20px;
+ 	padding: 60px 0 20px;
+}
+
+.orderEndTit{
+	padding-top:50px;
+	font-size: 30px;
+	font-weight: 400;
+	padding-bottom: 30px;
+	text-align: center;
+	
+}
+
+.orderEndingTit{
+	padding-top:50px;
+	font-size: 30px;
+	font-weight: 400;
+	padding-bottom: 30px;
+	text-align: center;
+	
+}
+.wishTit{
+	font-size: 30px;
+	font-weight: 400;
+	padding-bottom: 30px;
+	text-align: center;
+    color: #222;
+}
+
+.wishList .myPrd p {
+	text-align: center;
+}
+
+
+.wishPrd{
+	border-top: 1px solid black;
+}
+
+
+.wishPrd>ul>li{
+	float: left;
+	padding:50px 20px 50px 20px;
+}
+
+.wish_prd>img{
+	width: 200px;
+	height: 180px;
+}
+
+.wishPrd>ul{
+	width: 1000px;
+	height: 350px;
+	overflow: hidden;
+}
+
+
+
+.wishPrd .w{
+	display:block;
+	margin:0 auto;
+	width: 200px;
+	height: 200px;
+	}
+
+.wishPrd::after{
+	clear:both;
+	display: block;
+}
+
+
+/* 주문 현황 */
+
+thead th {
+    padding: 15px 20px;
+    font-size: 13px;
+    color: #222222;
+}
+
+tbody tr:first-child td {
+    border-top: 1px solid #dcdcdc;
+}
+
+tbody tr{
+	border-bottom: 1px solid #dcdcdc;
+}
+
+
+.th_thumb{
+    position: relative;
+}
+
+.th_thumb .inp_check {
+    position: absolute;
+    left:10px;
+    top: 12px;
+    height: 16px;
+    z-index: 10;
+}
+
+.td_thumb{
+	position: relative;
+	padding-top:10px;
+	padding-bottom: 15px;
+}
+
+.td_thumb .inp_check {
+    position: absolute;
+    left:10px;
+    top: 12px;
+    height: 16px;
+    z-index: 10;
+}
+
+
+
+.opt_prdinfo{
+	position:relative;
+	padding-left: 30px;
+}
+
+.opt_prdname{
+	position:relative;
+	padding-left: 30px;
+}
+
+.opt_price{
+	position: relative;
+	text-align: center;
+}
+
+
+
+.cost{
+	padding-top:5px;
+	position: relative;
+	text-align: center;
+}
+
+
+
+
+.ju{
+	margin-left: 55px;
+}
+
+.sak{
+	margin-left: 40px;
+}
+
+
+
+
+
+
+/* 버튼 */
+
+
+.but_{text-align: center; margin-top: 30px;}
+
+
+.button-3{
+  width:160px;
+  height:40px;
+  text-align: center;
+  border:1px solid black;
+  background-color:white;
+  float:left;
+  left:37%;
+  cursor:pointer;
+  position:relative;
+  box-sizing:border-box;
+  overflow:hidden;
+  margin-right: 20px;
+  
+}
+.button-3 span{
+  font-size:14px;
+  color:black;
+  text-decoration:none;
+  line-height:39px;
+  transition:all .3s ease;
+  z-index:2;
+  position:relative;
+}
+.eff-3{
+  width:160px;
+  height:40px;
+  left:-160px;
+  background:black;
+  position:absolute;
+  transition:all .3s ease;
+  z-index:1;
+}
+.button-3:hover .eff-3{
+  left:0;
+}
+.button-3:hover span{
+  color:white;
+}
+
+
+
+.button-4{
+  width:160px;
+  height:40px;
+  text-align: center;
+  border:1px solid black;
+  float:left;
+  cursor:pointer;
+  left:37%;
+  position:relative;
+  box-sizing:border-box;
+  overflow:hidden;
+  background: black;
+  
+}
+.button-4 span{
+  font-size:14px;
+  color:white;
+  text-decoration:none;
+  line-height:39px;
+  transition:all .3s ease;
+  z-index:2;
+  position:relative;
+}
+.eff-4{
+  width:160px;
+  height:40px;
+  left:-160px;
+  background:white;
+  position:absolute;
+  transition:all .3s ease;
+  z-index:1;
+}
+.button-4:hover .eff-4{
+  left:0;
+}
+.button-4:hover span{
+  color:black;
+}
+
+
+
+
+.button-5{
+  width:160px;
+  height:40px;
+  text-align: center;
+  border:1px solid black;
+  background-color:white;
+  float:left;
+  left:32%;
+  cursor:pointer;
+  position:relative;
+  box-sizing:border-box;
+  overflow:hidden;
+  margin-right: 20px;
+  
+}
+.button-5 span{
+  font-size:14px;
+  color:black;
+  text-decoration:none;
+  line-height:39px;
+  transition:all .3s ease;
+  z-index:2;
+  position:relative;
+}
+.eff-5{
+  width:160px;
+  height:40px;
+  left:-160px;
+  background:black;
+  position:absolute;
+  transition:all .3s ease;
+  z-index:1;
+}
+.button-5:hover .eff-5{
+  left:0;
+}
+.button-5:hover span{
+  color:white;
+}
+
+
+
+.button-6{
+  width:160px;
+  height:40px;
+  text-align: center;
+  border:1px solid black;
+  float:left;
+  cursor:pointer;
+  left:33%;
+  position:relative;
+  box-sizing:border-box;
+  overflow:hidden;
+  background: black;
+  
+}
+.button-6 span{
+  font-size:14px;
+  color:white;
+  text-decoration:none;
+  line-height:39px;
+  transition:all .3s ease;
+  z-index:2;
+  position:relative;
+}
+.eff-6{
+  width:160px;
+  height:40px;
+  left:-160px;
+  background:white;
+  position:absolute;
+  transition:all .3s ease;
+  z-index:1;
+}
+.button-6:hover .eff-6{
+  left:0;
+}
+.button-6:hover span{
+  color:black;
+}
+
+
+
+
+
+
+
+/* 최근 본 상품 */
+
+
+.lastPrd{
+	clear: both;
+	margin-top:40px;
+	padding: 60px 0 20px;
+}
+
+
+
+
+.lastPrdi .w{
+	display:block;
+	margin:0 auto;
+	width: 200px;
+	height: 200px;
+}
+
+
+
+
+
+/* 작성, 등록 버튼 */
+
+
+.list_btn{
+	text-align: center;
+	margin-top: 40px;
+}
+
+
+/* .btn_list{
+	width:180px;
+    height: 30px;
+    line-height: 29px;
+    display: inline-block;
+    background-color: black;
+    padding: 10px 10px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    font-size: 15px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+#footer{
+	position: relative;
+	padding-left:90px;	
+	box-sizing: border-box;
+	padding-top: 60px;
+}
+
+#footer>div{
+	padding: 0 60px;
+}
+
+.footerT{
+	padding: 0 60px;
+	position:relative;
+	border-top: 1px solid #eeeeee;
+}
+
+#footer .foot_menu {
+    padding: 20px 0;
+}
+
+#footer .foot_menu ul {
+    margin-left: -10px;
+}
+
+.foot_menu li{
+	float: left;
+	margin-right: 20px;
+}
+
+#footer .sitemap {
+    position: absolute;
+    right: 325px;
+	width: 160px;
+    height: 100%;
+}
+
+#footer .familysite {
+    position: absolute;
+    right: 168px;
+ 	width: 150px;
+    height: 100%;
+}
+
+#footer .korean {
+    position: absolute;
+    right: 50px;
+ 	swidth: 110px;
+    height: 100%;
+}
+
+.foot_menu::after{
+	content: "";
+    display: block;
+    clear: both;
+}
+
+.footerM{
+	position: relative;
+    background: #f9f9f9;
+}
+
+.footInfo{
+	padding: 25px 0;
+    font-size: 12px;
+    line-height: 24px;
+    color: #999999;
+}
+
+.foot_sns {
+    position: absolute;
+    right: 55px;
+    top: 45px;
+}
+
+.foot_sns>a>img{
+	margin-right:20px;
+}
+
+.footerB{
+	background: #f9f9f9;
+    border-top: 1px solid #eeeeee;
+}
+
+.footMaker {
+	font-size: 12px;
+	color: #999999;
+    padding: 30px 0 70px;
+ 
+}
+
+
+.footMaker span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footMaker>ul>li {
+	float: left;
+    position: relative;
+    margin-right: 40px;
+    font-size: 11px;
+    line-height: 14px;
+    color: #999999;
+}
+
+

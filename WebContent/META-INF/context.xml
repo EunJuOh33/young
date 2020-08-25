@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource 
+	name = "jdbc/emb1young" 
+	auth = "Container"
+	type = "javax.sql.DataSource"
+	username = "emb1young"
+	password = "emb1young"
+	driverClassName = "com.mysql.cj.jdbc.Driver"
+	factory = "org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"	 
+	url = "jdbc:mysql://118.131.179.138:3306/embed1_young?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Asia/Seoul"
+	maxActive = "500"
+	maxIdle = "100"
+	/>

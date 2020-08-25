@@ -1,0 +1,224 @@
+* {	/* 기본 설정 */
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	letter-spacing: -1.1px;	/* 글자와 글자사이의 간격. 원래 폰트의 간격에서 -1.1px만큼 줄였다. */
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+img {
+	display: block;	/* 이미지는 사방으로 마진이 2정도 생긴다. 원래 이미지는 inline 요소인데 block으로 만들어준다. */
+	position: absolute; /* relative속성을 가진 부모요소를 기준으로 위치를 정한다. 심지어 부모 요소 위에 겹쳐서 배치할 수도 있다.*/
+}
+
+
+/* -------------------------- section -------------------------- */
+.clearFix::before, .clearFix::after {
+	content: "";
+	display: block;
+}
+
+.clearFix {
+	width: 980px;
+	height: 572px;	/* joinSection_top 높이(=184)를 못잡아서 정해줬다.*/
+	margin: auto;
+	position: relative;
+	padding-left: 90px;	/* 왼쪽 네비게이션 너비만큼 padding을 줬다. */
+}
+
+section .joinSection_top #icon {
+	position: absolute;
+	top: -25px;
+	padding-left: 90px;
+	left: 140px;
+}
+
+section .joinSection_top .joinSection_title {
+	position: absolute;
+	top: 65px;
+	left: 480px;	/* padding: 90px 한 것과 같다. */
+}
+
+section .joinSection_top .joinSection_title span {	/* 회원가입 글자 */
+	font-size: 47.5px;
+	color: #222222;
+}
+
+
+/* -------------------------- section body -------------------------- */
+section .joinSection_body p {	/* 글자 스타일 */
+	font-weight: 600;
+	color: #28283C;
+	text-align: center;
+	letter-spacing: -0.8px;
+}
+
+section .joinSection_body small {	/* 회색 글자 스타일 */
+	display: block;
+	height: 27px;
+	line-height: 27px;
+	
+	text-align: center;
+	font-weight: 700;
+	font-size: 14px;
+	color: #9C999F;
+	letter-spacing: -1px;
+}
+
+section .joinSection_body {
+	width: 980px;
+	height: 387px;
+	position: relative;
+	top: 185px;
+	border-top: 1px solid black;
+	background-color: #F9F9F9;
+}
+
+/* bodyUp */
+section .joinSection_body .bodyUp {
+	position: relative;
+	height: 99px;	/* 총 232px이 되어야 한다. */
+	padding: 66.5px 0;
+}
+
+section .joinSection_body .bodyUp p {
+	font-size: 18px;
+	height: 45px;
+}
+
+/* bodyDown */
+section .joinSection_body .bodyDown {
+	position: relative;
+	height: 62px;	/* 총 154px이 되어야 한다. */
+	margin: 0 60px;
+	padding: 43px 0 49px 0;
+	border-top: 1px solid #DCDCDC;
+}
+
+section .joinSection_body .bodyDown p {
+	font-size: 14px;
+	height: 35px;
+	line-height: 35px;
+}
+
+
+/* -------------------------- right_menu -------------------------- */
+
+.right_menu {
+	position: relative;
+	height: 87px;
+	top: 0;
+	padding-left: 1400px;
+}
+
+.right_menu .order {
+	position: absolute;
+	bottom: 15px;
+	right: 62px;
+}
+
+.right_menu .order ol {
+	height: 28px;
+	width: 262px;
+	border-bottom: 1px solid #dcdcdc;	/* 실선 */
+}
+
+.right_menu .order ol li {
+	float: left;	/* li 메뉴들이 서로 옆에 붙도록 한다. */
+	height: 20px;
+	width: 70px;
+	padding: 0 2px 8px 2px;
+	margin-left: 20px;
+	display: list-item;
+	
+	font-weight: 600;
+	font-size: 14px;
+	color: #dcdcdc; 
+}
+
+.right_menu .order ol .first {
+	margin-left: 0;	/* '01이용약관' 왼쪽 마진 없애준다. */
+}
+
+.right_menu .order ol .on {	/* 현재 페이지 - 이용약관 */
+/*	margin-bottom: -1px; */
+	color: #222222;
+	border-bottom: 1px solid #222222;
+}
+
+
+/* -------------------------- 버튼 -------------------------- */
+.joinArticle_B {
+	position: relative;
+	padding-left: 90px;
+	margin: 0 auto;
+	width: 980px;
+	height: 85px;
+}
+
+@media all and (max-width: 1300px) {	
+/* 브라우저 너비가 1300px보다 작아질 때 이 쿼리가 실행됨 */
+	.clearFix {
+		margin: 0 105px;
+	}
+	.joinArticle_B {
+		margin: 0 105px;
+	}
+}
+
+.joinArticle_B .joinBtn {
+	width: 285px;
+	height: 85px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.joinArticle_B .joinBtn .btn_all {
+	position: absolute;	/* 부모인 .joinBtn 기준으로 위치설정 */
+	top: 45px;
+	width: 138px;
+	height: 38px;
+	font-size: 14.3px;
+	text-align: center;
+	font-weight: 800;
+	line-height: 40px;
+	
+	/* 애니메이션 */
+	cursor: pointer;	/* 커서를 올리면 커서가 포인터 모양으로 변한다. */
+	transition: all 0.3s;	/* 모두 0.3초만에 바뀐다. */
+}
+
+.joinArticle_B .joinBtn .btn_join {	/* '회원가입' 버튼 */
+	left: 0;
+	background-color: #A6CD48;	/* 원래 초록색 */
+	color: white;	/* 텍스트 색깔 */
+	border: 1px solid #A6CD48;
+}
+
+.joinArticle_B .joinBtn .btn_join:hover {
+	color: black;
+	box-shadow: 140px 0 0 0 rgba(255, 255, 255, 1) inset;	
+	/* 오른쪽 방향으로 140px만큼 흰색 그림자를 만든다. (버튼의 width와 border 합한 값이 140px)
+		inset은 안쪽만 채운다는 의미, 만약 -140px이라면 왼쪽 방향으로 그림자가 만들어진다. */
+}
+
+.joinArticle_B .joinBtn .btn_cancel {	/* '취소' 버튼 */
+	left: 145px;
+	background-color: #FFFFFF;	/* 원래 흰색 */
+	color: #555555;	/* 텍스트 색깔 */
+	border: 1px solid #999999;
+}
+
+.joinArticle_B .joinBtn .btn_cancel:hover {
+	color: white;
+	box-shadow: 140px 0 0 0 rgba(153, 153, 153, 1) inset;	/* 회색 그림자 */
+}
