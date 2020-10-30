@@ -14,6 +14,21 @@
 🙂  **사용자계정(ID/PW동일)    >    sss1,  sss1**
 
 
+## 사진
+
+![홈02](https://user-images.githubusercontent.com/62224851/97671083-ebfeea80-1aca-11eb-8282-abef8eb7ec31.png)
+![로그인01](https://user-images.githubusercontent.com/62224851/97671119-fe792400-1aca-11eb-9ffc-9ea6a2f7c1fb.png)
+![리뷰게시판 01](https://user-images.githubusercontent.com/62224851/97671140-0933b900-1acb-11eb-9371-784e8c80b418.png)
+![제품01](https://user-images.githubusercontent.com/62224851/97671162-12248a80-1acb-11eb-9e45-e3f183bfdca4.png)
+![장바구니01](https://user-images.githubusercontent.com/62224851/97671185-1a7cc580-1acb-11eb-9e90-7f29c23fbc43.png)
+![주문하기01](https://user-images.githubusercontent.com/62224851/97671206-22d50080-1acb-11eb-9502-a98879664691.png)
+![회원가입01](https://user-images.githubusercontent.com/62224851/97671221-2b2d3b80-1acb-11eb-8f4b-127303299ce2.png)
+![회원관리 01](https://user-images.githubusercontent.com/62224851/97671251-354f3a00-1acb-11eb-98c5-5015e48ace87.png)
+![정보관리 페이지01](https://user-images.githubusercontent.com/62224851/97671272-3e400b80-1acb-11eb-9a99-0f31140bb19b.png)
+![회원 정보수정 페이지 01](https://user-images.githubusercontent.com/62224851/97671280-45671980-1acb-11eb-9e05-1731f967b46c.png)
+
+
+
 ## 본인 구현
 
 - **회원    [ 가입/탈퇴, 개인정보 조회/수정, 제품 찜한 후 주문하기 ]**
