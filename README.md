@@ -1,4 +1,6 @@
-!☘️ YOUNG ☘️ {:.aligncenter}
+:---:
+
+☘️ YOUNG ☘️
 =============
 
 
