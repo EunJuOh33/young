@@ -1,17 +1,16 @@
-☘️ YOUNG
+☘️ YOUNG ☘️
 =============
 
 
 
 ## 👇 주소
-[Google](http://embed.swq.co.kr/young, "YOUNG link")
-http://embed.swq.co.kr/young
+http://embed.swq.co.kr/young <br>
 
 
 
 
 ## 소개
-> 팀프로젝트로 만든 게시판과 쇼핑몰 기능이 있는 사이트입니다.   
+> 팀프로젝트로 만든 '게시판'과 '쇼핑몰' 기능이 있는 사이트입니다.   
 > 닥터자르트 사이트를 클론코딩하여 올리브영 사이트로 리뉴얼 하는 것이 목적이었습니다.       
       
 
